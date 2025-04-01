@@ -17,14 +17,13 @@
 #define ADJUST 3
 
 // Encoders
-
 &left_encoder {
     compatible = "alps,ec11";
-    steps = <30>;
+    steps = <60>;
 };
 &right_encoder {
     compatible = "alps,ec11";
-    steps = <30>;
+    steps = <60>;
 };
 &sensors {
     compatible = "zmk,keymap-sensors";
