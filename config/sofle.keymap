@@ -16,8 +16,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
-
 / {
     left_encoder { steps = <30>; };
 
@@ -57,7 +55,7 @@
                  &kp LALT  &kp LMETA &kp LCTRL &mo LOWER  &kp SPACE  &kp RET    &mo RAISE  &kp RCTRL &kp RMETA &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp MSC_SCROLL_UP MSC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &msc SCRL_UP SCRL_DOWN>;
         };
 
         lower_layer {
@@ -77,7 +75,7 @@
                      &trans    &trans      &trans      &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp MSC_SCROLL_UP MSC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &msc SCRL_UP SCRL_DOWN>;
         };
 
         raise_layer {
@@ -96,7 +94,7 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp MSC_SCROLL_UP MSC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &msc SCRL_UP SCRL_DOWN>;
         };
 
         adjust_layer {
