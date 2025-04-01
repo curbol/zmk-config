@@ -16,8 +16,11 @@
 #define ADJUST 3
 
 / {
+    sensors {
+        triggers-per-rotation = <30>;
+    };
 
-   // Activate ADJUST layer by pressing raise and lower
+    // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
         adjust_layer {

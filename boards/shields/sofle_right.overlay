@@ -1,4 +1,0 @@
-&encoder0 {
-    encoder-resolution = <1>;
-    direction = <0>; // flip if needed
-};
