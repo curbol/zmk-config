@@ -11,8 +11,6 @@
 
 // NOTE: Adding or removing mouse support requires updating the HID Descriptor (re-pair to the devices).
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
-#define ZMK_MOUSE_SCRL_VAL 140
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
@@ -63,8 +61,7 @@
                  &kp LALT  &kp LMETA &kp LCTRL &mo LOWER  &kp SPACE  &kp RET     &mo RAISE  &kp RCTRL &kp RMETA &kp RALT
             >;
 
-            sensor-bindings =
-               <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         lower_layer {
@@ -84,8 +81,7 @@
                      &trans    &trans      &trans      &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings =
-               <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         raise_layer {
@@ -104,8 +100,7 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings =
-               <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         adjust_layer {
