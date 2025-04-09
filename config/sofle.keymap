@@ -38,7 +38,6 @@
     };
 
     // Activate ADJUST layer by pressing raise and lower
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -92,14 +91,6 @@
 
         default_layer {
             display-name = "default";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |   2   |   3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
-            // |  TAB  |  Q  |   W   |   E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  ESC  |  A  |   S   |   D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |   X   |   C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               |  ALT  | META  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | META  | ALT  |
-
             bindings = <
 &trans     &kp N1  &kp N2  &kp N3  &kp N4         &kp N5                                            &kp N6           &kp N7                    &kp N8     &kp N9   &kp N0            &trans
 &kp TAB    &kp Q   &kp W   &kp E   &kp R          &kp T                                             &kp Y            &kp U                     &kp I      &kp O    &kp P             &kp BSPC
@@ -107,21 +98,11 @@
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V          &kp B        &kp C_PP          &kp C_SLEEP        &kp N            &kp M                     &kp COMMA  &kp DOT  &kp FSLH          &kp RSHFT
                    &trans  &trans  &mt LCTRL TAB  &lt 1 SPACE  &kp LEFT_SHIFT    &mt RIGHT_ALT ESC  &lt RAISE ENTER  &mt RIGHT_META BACKSPACE  &trans     &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         lower_layer {
             display-name = "lower";
-
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // |  F12  |  F1  |  F2 |  F3  |  F4   |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // |       |  1   |   2 |   3  |  4    |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |       |  _   |  [  |  {   |  (    |  -   |                   |  +   |  )    |  }    |  ]   |   =   |   |   |
-            // |       |  !   |  @  |  #   |  $    |  %   |                   |  ^   |  &    |  *    |      |   \   |       |
-            //                |     |      |       |      |        |  |       |      |       |       |      |
-
             bindings = <
 &kp F12  &kp F1     &kp F2    &kp F3    &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10    &kp F11
 &trans   &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0     &trans
@@ -129,20 +110,11 @@
 &trans   &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &trans    &trans  &kp CARET  &kp AMPS  &kp ASTRK  &trans    &kp BSLH   &trans
                     &trans    &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans     &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         raise_layer {
             display-name = "raise";
-
-            // ---------------------------------------------------------------------------------------------------------
-            // |       |      |      |       |       |      |                |      |      |     |      |       |       |
-            // | CAPS  |      |      |       |       |      |                | PGUP | HOME |     |      |       |       |
-            // |       |      |      |       |       |      |                |   <- |  v   |  ^  |  ->  |       |       |
-            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | PGDN | END  |     |      |       |       |
-            //                |      |       |       |      |      |  |      |      |      |     |      |
-
             bindings = <
 &trans      &trans     &trans     &trans     &trans     &trans                    &trans     &trans    &trans  &trans     &trans  &trans
 &caps_word  &trans     &trans     &trans     &trans     &trans                    &kp PG_UP  &kp HOME  &trans  &trans     &trans  &trans
@@ -150,18 +122,10 @@
 &trans      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans    &trans  &kp PG_DN  &kp END   &trans  &trans     &trans  &trans
                        &trans     &trans     &trans     &trans  &trans    &trans  &trans     &trans    &trans  &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         adjust_layer {
-            // ----------------------------------------------------------------------------------------------------------------------------
-            // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       | BTCLRALL |
-            // | EXTPWR |         |         |         |         | STUDIO  |                  |      |      |       |      |       |          |
-            // |        |         |         |         |         |         |                  |      |      |       |      |       |          |
-            // |        |         |         |         |         |         |         | |      |      |      |       |      |       |          |
-            //                    |         |         |         |         |         | |      |      |      |       |      |
-
             display-name = "adjust";
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none  &bt BT_CLR
