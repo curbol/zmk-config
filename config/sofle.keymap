@@ -44,7 +44,7 @@
 
         adjust_layer {
             if-layers = <5 3>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 
@@ -98,11 +98,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans                              &trans     &trans     &trans     &trans   &trans    &trans
-&trans  &kp Q   &kp W   &kp E   &kp R      &kp T                               &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
-&trans  &kp A   &kp S   &kp D   &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L    &kp SQT   &trans
-&trans  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp C_PP    &kp C_SLEEP  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                &trans  &trans  &kp LCTRL  &kp SPACE  &kp LALT    &kp RSHFT    &kp ENTER  &kp RMETA  &trans     &trans
+&trans  &trans  &trans  &trans  &trans     &trans                                &trans     &trans     &trans     &trans   &trans    &trans
+&trans  &kp Q   &kp W   &kp E   &kp R      &kp T                                 &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
+&trans  &kp A   &kp S   &kp D   &kp F      &kp G                                 &kp H      &kp J      &kp K      &kp L    &kp SQT   &trans
+&trans  &kp Z   &kp X   &kp C   &kp V      &kp B        &kp C_PP    &kp C_SLEEP  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                &trans  &trans  &kp LCTRL  &lt 1 SPACE  &kp LALT    &kp RSHFT    &lt 2 RET  &kp RMETA  &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
@@ -138,19 +138,6 @@
                 <&scroll_up_down>;
         };
 
-        raise_layer {
-            display-name = "raise";
-            bindings = <
-&trans      &trans     &trans     &trans     &trans     &trans                    &trans     &trans    &trans  &trans     &trans  &trans
-&caps_word  &trans     &trans     &trans     &trans     &trans                    &kp PG_UP  &kp HOME  &trans  &trans     &trans  &trans
-&trans      &kp LG(A)  &trans     &trans     &kp LG(F)  &trans                    &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans    &trans  &kp PG_DN  &kp END   &trans  &trans     &trans  &trans
-                       &trans     &trans     &trans     &trans  &trans    &trans  &trans     &trans    &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
-        };
-
         adjust_layer {
             display-name = "adjust";
             bindings = <
@@ -160,19 +147,6 @@
 &none              &none         &none         &none         &none         &none           &none    &none  &none  &none  &none  &none  &none  &none
                                  &none         &none         &none         &none           &none    &none  &none  &none  &none  &none
             >;
-        };
-
-        lower_layer_old {
-            display-name = "lower";
-            bindings = <
-&kp F12  &kp F1     &kp F2    &kp F3    &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10    &kp F11
-&trans   &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0     &trans
-&trans   &kp UNDER  &kp LBKT  &kp LBRC  &kp LPAR  &kp MINUS                    &kp PLUS   &kp RPAR  &kp RBRC   &kp RBKT  &kp EQUAL  &trans
-&trans   &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &trans    &trans  &kp CARET  &kp AMPS  &kp ASTRK  &kp PIPE  &kp BSLH   &trans
-                    &trans    &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans     &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
     };
 };
