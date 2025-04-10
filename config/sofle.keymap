@@ -18,8 +18,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-// Encoders
-
 &left_encoder { steps = <60>; };
 
 &right_encoder { steps = <60>; };
