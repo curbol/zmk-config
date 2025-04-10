@@ -58,7 +58,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <15 16>;
+            key-positions = <26 27>;
         };
 
         copy {
@@ -84,6 +84,21 @@
         semi_colon {
             bindings = <&kp SEMI>;
             key-positions = <46 47>;
+        };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <44 30>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <45 31>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <19 31>;
         };
     };
 
