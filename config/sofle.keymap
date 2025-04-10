@@ -98,11 +98,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                              &kp N6     &kp N7     &kp N8     &kp N9   &kp N0    &kp DEL
-&kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                               &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A   &kp S   &kp D   &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L    &kp SQT   &kp GRAVE
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp C_PP    &kp C_SLEEP  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                   &trans  &trans  &kp LCTRL  &kp SPACE  &kp LALT    &kp RSHFT    &kp ENTER  &kp RMETA  &trans     &trans
+&trans  &trans  &trans  &trans  &trans     &trans                              &trans     &trans     &trans     &trans   &trans    &trans
+&trans  &kp Q   &kp W   &kp E   &kp R      &kp T                               &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
+&trans  &kp A   &kp S   &kp D   &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L    &kp SQT   &trans
+&trans  &kp Z   &kp X   &kp C   &kp V      &kp B      &kp C_PP    &kp C_SLEEP  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                &trans  &trans  &kp LCTRL  &kp SPACE  &kp LALT    &kp RSHFT    &kp ENTER  &kp RMETA  &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
@@ -111,11 +111,11 @@
         lower_layer {
             display-name = "lower";
             bindings = <
-&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans     &trans   &trans
-&trans  &trans   &kp N7  &kp N8  &kp N9  &trans                    &trans  &kp PLUS   &kp TILDE  &kp ASTRK  &trans   &trans
-&trans  &kp DOT  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp EQUAL  &kp UNDER  &kp FSLH   &kp DQT  &trans
-&trans  &kp N0   &kp N1  &kp N2  &kp N3  &trans  &trans    &trans  &trans  &kp MINUS  &kp QMARK  &kp EXCL   &trans   &trans
-                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans     &trans
+&trans  &trans   &trans  &trans  &trans  &trans                    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans   &kp N7  &kp N8  &kp N9  &trans                    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &kp DOT  &kp N4  &kp N5  &kp N6  &trans                    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp N0   &kp N1  &kp N2  &kp N3  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans
             >;
 
             sensor-bindings =
@@ -124,13 +124,13 @@
         };
 
         symbol_layer {
-            display-name = "symbols";
+            display-name = "symbol";
             bindings = <
-&trans  &trans     &trans    &trans     &trans     &trans                    &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &kp CARET  &kp AMPS  &kp ASTRK  &kp PRCNT  &trans                    &trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &trans
-&trans  &kp SEMI   &kp LPAR  &kt RPAR   &kp COLON  &trans                    &trans  &kp EQUAL  &kp LBRC  &kp RBRC  &kp SQT    &trans
-&trans  &kp BSLH   &kp LBKT  &kp RBKT   &kp FSLH   &trans  &trans    &trans  &trans  &kp PIPE   &kp LT    &kp GT    &kp GRAVE  &trans
-                   &trans    &trans     &trans     &trans  &trans    &trans  &trans  &trans     &trans    &trans
+&trans  &trans     &trans    &trans    &trans     &trans                    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp CARET  &kp STAR  &kp EXCL  &kp MINUS  &trans                    &trans  &kp COLON  &kp EQUAL  &kp AMPS  &kp DLLR  &trans
+&trans  &kp PIPE   &kp LBRC  &kt RBRC  &kp PLUS   &trans                    &trans  &kp GRAVE  &kp LPAR   &kp RPAR  &kp SEMI  &trans
+&trans  &kp BSLH   &kp LBKT  &kp RBKT  &kp UNDER  &trans  &trans    &trans  &trans  &kp PRCNT  &kp LT     &kp GT    &kp FSLH  &trans
+                   &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings =
