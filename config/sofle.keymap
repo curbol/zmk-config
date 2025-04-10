@@ -53,12 +53,12 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <2 3>;
+            key-positions = <14 15>;
         };
 
         tab {
             bindings = <&none>;
-            key-positions = <3 4>;
+            key-positions = <15 16>;
         };
 
         copy {
@@ -73,12 +73,12 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <8 9>;
+            key-positions = <20 21>;
         };
 
         semi_colon {
