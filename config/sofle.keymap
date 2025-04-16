@@ -1,4 +1,5 @@
 // Editor: https://nickcoutsos.github.io/keymap-editor/
+// Reference: https://github.com/urob/zmk-config
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
@@ -74,6 +75,7 @@
             hold-trigger-key-positions = <54 53 55 56 57 41 29 17 40 28 16 39 27 15 38 26 14 37 25 13 52>;
         };
 
+        // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
         comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_MORPH";
@@ -92,6 +94,7 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
+        // Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
         dot_inner_morph: dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_INNER_MORPH";
@@ -110,6 +113,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // Tap: qmark | Shift + tap: excl.
         qexcl: qexcl {
             compatible = "zmk,behavior-mod-morph";
             label = "QEXCL";
@@ -119,6 +123,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
         lpar_lt: lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             label = "LPAR_LT";
@@ -137,6 +142,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // Tap: space | Shift + tap: dot -> space -> sticky shift | Hold: nav layer.
         spc_morph: spc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_MORPH";
@@ -157,6 +163,7 @@
             flavor = "balanced";
         };
 
+        // Tap: BT_CLR | Shift + tap: BT_CLR_ALL.
         bt_clr: bt_clr {
             compatible = "zmk,behavior-mod-morph";
             label = "BT_CLR";
@@ -188,37 +195,44 @@
 
         esc {
             bindings = <&kp ESC>;
+            key-positions = <27 32>;
+            timeout-ms = <18>;
             key-positions = <14 15>;
         };
 
         tab {
             bindings = <&kp TAB>;
+            key-positions = <27 32>;
+            timeout-ms = <18>;
             key-positions = <15 16>;
         };
 
         copy {
             bindings = <&kp LG(C)>;
+            key-positions = <27 32>;
+            timeout-ms = <18>;
             key-positions = <38 39>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
+            key-positions = <27 32>;
+            timeout-ms = <18>;
             key-positions = <39 40>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
+            key-positions = <27 32>;
+            timeout-ms = <18>;
             key-positions = <19 20>;
         };
 
         delete {
             bindings = <&kp DELETE>;
+            key-positions = <27 32>;
+            timeout-ms = <18>;
             key-positions = <20 21>;
-        };
-
-        semi_colon {
-            bindings = <&kp SEMI>;
-            key-positions = <46 47>;
         };
     };
 
