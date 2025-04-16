@@ -28,7 +28,7 @@
         hrm_l: hrm_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_L";
-            bindings = <&none>, <&none>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -42,7 +42,7 @@
         hrm_r: hrm_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_R";
-            bindings = <&none>, <&none>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -113,11 +113,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&trans  &trans        &trans       &trans        &trans        &trans                                &trans     &trans        &trans        &trans       &trans          &trans
-&trans  &kp Q         &kp W        &kp E         &kp R         &kp T                                 &kp Y      &kp U         &kp I         &kp O        &kp P           &trans
-&trans  &hml LMETA A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G                                 &kp H      &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr LMETA SQT  &trans
-&trans  &kp Z         &kp X        &kp C         &kp V         &kp B        &kp C_PP    &kp C_SLEEP  &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        &trans
-                      &trans       &trans        &trans        &lt 1 SPACE  &kp LALT    &kp RSHFT    &lt 2 RET  &trans        &trans        &trans
+&trans  &trans          &trans         &trans           &trans          &trans                                &trans     &trans          &trans           &trans         &trans            &trans
+&trans  &kp Q           &kp W          &kp E            &kp R           &kp T                                 &kp Y      &kp U           &kp I            &kp O          &kp P             &trans
+&trans  &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHIFT D  &hrm_l LCTRL F  &kp G                                 &kp H      &hrm_r LCTRL J  &hrm_r RSHIFT K  &hrm_r LALT L  &hrm_r LMETA SQT  &trans
+&trans  &kp Z           &kp X          &kp C            &kp V           &kp B        &kp C_PP    &kp C_SLEEP  &kp N      &kp M           &kp COMMA        &kp DOT        &kp FSLH          &trans
+                        &trans         &trans           &trans          &lt 1 SPACE  &kp LALT    &kp RSHFT    &lt 2 RET  &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
