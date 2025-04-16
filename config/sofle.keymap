@@ -115,10 +115,10 @@ ZMK_HOLD_TAP(hmr,
             bindings = <
 &trans  &trans       &trans      &trans       &trans       &trans                                &trans       &trans       &trans      &trans       &trans    &trans
 &trans  &kp Q        &kp W       &kp E        &kp R        &kp T                                 &kp Y        &kp U        &kp I       &kp O        &kp P     &trans
-&trans  &hml LMETA A &hml LALT S &hml LSHFT D &hml LCTRL F &kp G                                 &hml LCTRL H &hml RSHFT J &hml LALT K &hml LMETA L &kp SQT   &trans
+&trans  &hml LMETA A &hml LALT S &hml LSHFT D &hml LCTRL F &kp G                                 &hmr LCTRL H &hmr RSHFT J &hmr LALT K &hmr LMETA L &kp SQT   &trans
 &trans  &kp Z        &kp X       &kp C        &kp V        &kp B        &kp C_PP    &kp C_SLEEP  &kp N        &kp M        &kp COMMA   &kp DOT      &kp FSLH  &trans
                      &trans      &trans       &trans       &lt 1 SPACE  &kp LALT    &kp RSHFT    &lt 2 RET    &trans       &trans      &trans
-            >;
+            >
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
