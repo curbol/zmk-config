@@ -238,6 +238,16 @@
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
         };
+
+        lpar {
+            bindings = <&hrm_r RS(LCTRL) LPAR>;
+            key-positions = <31 32>;
+        };
+
+        rpar {
+            bindings = <&hrm_r LS(LALT) RPAR>;
+            key-positions = <32 33>;
+        };
     };
 
     macros {
