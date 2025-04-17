@@ -235,15 +235,15 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
         };
 
         delete {
             bindings = <&kp DELETE>;
             key-positions = <20 21>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
         };
 
         lbkt_lbrc {
