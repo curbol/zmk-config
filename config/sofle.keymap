@@ -110,7 +110,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-          
+
         dot_inner_morph: dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_INNER_MORPH";
@@ -165,10 +165,11 @@
         esc_inner_morph: esc_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "ESC_INNER_MORPH";
-            bindings = <&kp LS(BSPC)>, <&kp DEL>;
+            bindings = <&kp BSPC>, <&kp DEL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         // Tap: space | Shift + tap: tab | Hold: nav layer.
@@ -287,11 +288,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&trans  &trans          &trans         &trans           &trans          &trans                                  &trans     &trans          &trans           &trans         &trans            &trans
-&trans  &kp Q           &kp W          &kp E            &kp R           &kp T                                   &kp Y      &kp U           &kp I            &kp O          &kp P             &trans
-&trans  &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHIFT D  &hrm_l LCTRL F  &kp G                                   &kp H      &hrm_r LCTRL J  &hrm_r RSHIFT K  &hrm_r LALT L  &hrm_r LMETA SQT  &trans
-&trans  &kp Z           &kp X          &kp C            &kp V           &kp B       &kp C_PP       &kp C_SLEEP  &kp N      &kp M           &comma_morph     &dot_morph     &qexcl            &trans
-                        &trans         &trans           &trans          &esc_morph  &lt_spc 1 0    &lt 2 ENTER  &kp LSHFT  &trans          &trans           &trans
+&trans  &trans          &trans         &trans          &trans          &trans                                  &trans     &trans          &trans          &trans         &trans            &trans
+&trans  &kp Q           &kp W          &kp E           &kp R           &kp T                                   &kp Y      &kp U           &kp I           &kp O          &kp P             &trans
+&trans  &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G                                   &kp H      &hrm_r LCTRL J  &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT  &trans
+&trans  &kp Z           &kp X          &kp C           &kp V           &kp B       &kp C_PP       &kp C_SLEEP  &kp N      &kp M           &comma_morph    &dot_morph     &qexcl            &trans
+                        &trans         &trans          &trans          &esc_morph  &lt_spc 1 0    &lt 2 ENTER  &kp LSHFT  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
