@@ -240,13 +240,17 @@
         };
 
         lpar {
-            bindings = <&hrm_r RS(LCTRL) LPAR>;
+            bindings = <&hrm_r RS(LCTRL) &lpar_lt>;
             key-positions = <31 32>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
         };
 
         rpar {
-            bindings = <&hrm_r LS(LALT) RPAR>;
+            bindings = <&hrm_r LS(LALT) &rpar_gt>;
             key-positions = <32 33>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
         };
     };
 
