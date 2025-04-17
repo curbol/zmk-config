@@ -275,6 +275,16 @@
             bindings = <&rpar_gt>;
             key-positions = <46 47>;
         };
+
+        at {
+            bindings = <&kp AT>;
+            key-positions = <14 26>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <38 26>;
+        };
     };
 
     macros {
