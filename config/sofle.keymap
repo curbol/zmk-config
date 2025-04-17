@@ -15,9 +15,7 @@
     quick-release;
 };
 
-&sl {
-    ignore-modifiers;
-};
+&sl { ignore-modifiers; };
 
 &lt {
     flavor = "balanced";
@@ -76,6 +74,7 @@
         };
 
         // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
+
         comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_MORPH";
@@ -95,6 +94,7 @@
         };
 
         // Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
+
         dot_inner_morph: dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_INNER_MORPH";
@@ -114,6 +114,7 @@
         };
 
         // Tap: qmark | Shift + tap: excl.
+
         qexcl: qexcl {
             compatible = "zmk,behavior-mod-morph";
             label = "QEXCL";
@@ -124,6 +125,7 @@
         };
 
         // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
+
         lpar_lt: lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             label = "LPAR_LT";
@@ -143,6 +145,7 @@
         };
 
         // Tap: space | Shift + tap: dot -> space -> sticky shift | Hold: nav layer.
+
         spc_morph: spc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_MORPH";
@@ -164,6 +167,7 @@
         };
 
         // Tap: BT_CLR | Shift + tap: BT_CLR_ALL.
+
         bt_clr: bt_clr {
             compatible = "zmk,behavior-mod-morph";
             label = "BT_CLR";
@@ -194,15 +198,15 @@
         };
 
         esc {
-            bindings = <&kp ESC>;
-            key-positions = <14 15>;
+            bindings = <&hrm_l LS(LALT) ESC>;
+            key-positions = <26 27>;
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <15 16>;
+            key-positions = <14 15>;
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
         };
