@@ -102,15 +102,6 @@
 
         // Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
 
-        dot_inner_morph: dot_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_INNER_MORPH";
-            bindings = <&kp COLON>, <&kp GT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
         dot_morph: dot_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_MORPH";
@@ -118,6 +109,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+          
+        dot_inner_morph: dot_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_INNER_MORPH";
+            bindings = <&kp COLON>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         // Tap: qmark | Shift + tap: excl.
@@ -151,7 +151,27 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Tap: space | Shift + tap: dot -> space -> sticky shift | Hold: nav layer.
+        // Tap: esc | Shift + tap: bspc | Ctrl + shift + tap: del.
+
+        esc_morph: esc_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_MORPH";
+            bindings = <&kp ESC>, <&esc_inner_morph>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        esc_inner_morph: esc_inner_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_INNER_MORPH";
+            bindings = <&kp LS(BSPC)>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        // Tap: space | Shift + tap: tab | Hold: nav layer.
 
         spc_morph: spc_morph {
             compatible = "zmk,behavior-mod-morph";
@@ -182,24 +202,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        esc_morph: esc_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ESC_MORPH";
-            bindings = <&kp ESC>, <&esc_inner_morph>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        esc_inner_morph: esc_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ESC_INNER_MORPH";
-            bindings = <&kp LS(BSPC)>, <&kp DEL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
