@@ -255,6 +255,15 @@
         };
     };
 
+    macros {
+        vim_save: vim_save {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp W &kp A>;
+            label = "VIM_SAVE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -289,10 +298,10 @@
         num_nav_layer {
             display-name = "numnav";
             bindings = <
-&trans  &trans    &trans  &trans  &trans  &trans                       &trans           &trans     &trans     &trans       &trans  &trans
-&trans  &kp STAR  &kp N7  &kp N8  &kp N9  &kp MINUS                    &kp LG(LS(TAB))  &kp BSPC   &kp DEL    &kp LG(TAB)  &trans  &trans
-&trans  &kp DOT   &kp N4  &kp N5  &kp N6  &kp PLUS                     &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &trans  &trans
-&trans  &kp FSLH  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans    &trans  &kp HOME         &kp PG_DN  &kp PG_UP  &kp END      &trans  &trans
+&trans  &trans    &trans  &trans  &trans  &trans                       &trans           &trans     &trans     &trans       &trans     &trans
+&trans  &kp STAR  &kp N7  &kp N8  &kp N9  &kp MINUS                    &kp HOME         &kp BSPC   &kp DEL    &kp END      &trans     &trans
+&trans  &kp DOT   &kp N4  &kp N5  &kp N6  &kp PLUS                     &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT    &vim_save  &trans
+&trans  &kp FSLH  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans    &trans  &kp LS(LG(TAB))  &kp PG_DN  &kp PG_UP  &kp LG(TAB)  &trans     &trans
                   &trans  &trans  &trans  &kp N0     &trans    &trans  &trans           &trans     &trans     &trans
             >;
 
