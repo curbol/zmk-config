@@ -259,7 +259,7 @@
         vim_save: vim_save {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp W &kp A>;
+            bindings = <&kp ESC &kp COLON &kp W &kp A &kp ENTER>;
             label = "VIM_SAVE";
         };
     };
