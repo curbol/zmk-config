@@ -205,14 +205,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        magic_shift_tap: magic_shift_tap {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MAGIC_SHIFT_TAP";
-            bindings = <&kp LSHFT>, <&caps_word>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        // Tap: sticky-shift | Shift + tap: caps_word | Hold: shift.
 
         magic_shift: magic_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -223,6 +216,15 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
+        };
+
+        magic_shift_tap: magic_shift_tap {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MAGIC_SHIFT_TAP";
+            bindings = <&kp LSHFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
