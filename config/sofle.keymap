@@ -204,6 +204,26 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        hsk: hsk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HSK";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+        };
+
+        magic_shift: magic_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MAGIC_SHIFT";
+            bindings = <&hsk LSHFT LSHFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -288,11 +308,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&trans  &trans          &trans         &trans          &trans          &trans                                  &trans     &trans          &trans          &trans         &trans            &trans
-&trans  &kp Q           &kp W          &kp E           &kp R           &kp T                                   &kp Y      &kp U           &kp I           &kp O          &kp P             &trans
-&trans  &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G                                   &kp H      &hrm_r LCTRL J  &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT  &trans
-&trans  &kp Z           &kp X          &kp C           &kp V           &kp B       &kp C_PP       &kp C_SLEEP  &kp N      &kp M           &comma_morph    &dot_morph     &qexcl            &trans
-                        &trans         &trans          &trans          &esc_morph  &lt_spc 1 0    &lt 2 ENTER  &kp LSHFT  &trans          &trans          &trans
+&trans  &trans          &trans         &trans          &trans          &trans                                  &trans        &trans          &trans          &trans         &trans            &trans
+&trans  &kp Q           &kp W          &kp E           &kp R           &kp T                                   &kp Y         &kp U           &kp I           &kp O          &kp P             &trans
+&trans  &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G                                   &kp H         &hrm_r LCTRL J  &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT  &trans
+&trans  &kp Z           &kp X          &kp C           &kp V           &kp B       &kp C_PP       &kp C_SLEEP  &kp N         &kp M           &comma_morph    &dot_morph     &qexcl            &trans
+                        &trans         &trans          &trans          &esc_morph  &lt_spc 1 0    &lt 2 ENTER  &magic_shift  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
