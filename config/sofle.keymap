@@ -240,13 +240,6 @@
     combos {
         compatible = "zmk,combos";
 
-        caps_word {
-            bindings = <&caps_word>;
-            key-positions = <27 32>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <38 39>;
@@ -259,48 +252,6 @@
             key-positions = <39 40>;
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
-        };
-
-        lbkt_lbrc {
-            bindings = <&hrm_r RS(LCTRL) LBKT>;
-            key-positions = <31 32>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
-        rbkt_rbrc {
-            bindings = <&hrm_r RS(LALT) RBKT>;
-            key-positions = <32 33>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
-        lpar_lt {
-            bindings = <&lpar_lt>;
-            key-positions = <45 46>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
-        rpar_gt {
-            bindings = <&rpar_gt>;
-            key-positions = <46 47>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <14 26>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <38 26>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
         };
     };
 
