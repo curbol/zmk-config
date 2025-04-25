@@ -332,9 +332,9 @@
             display-name = "sym";
             bindings = <
 &trans  &trans           &trans    &trans    &trans     &trans                    &trans  &trans     &trans    &trans     &trans     &trans
-&trans  &kp AT           &kp HASH  &kp DLLR  &kp PRCNT  &trans                    &trans  &kp CARET  &kp AMPS  &kp STAR   &kp TILDE  &trans
+&trans  &kp AT           &kp HASH  &kp AMPS  &kp STAR   &trans                    &trans  &kp CARET  &kp DLLR  &kp PRCNT  &kp TILDE  &trans
 &trans  &kp EXCLAMATION  &lpar_lt  &rpar_gt  &kp PLUS   &trans                    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &kp GRAVE  &trans
-&trans  &kp BSLH         &kp SEMI  &trans    &kp MINUS  &trans  &trans    &trans  &trans  &kp UNDER  &kp PIPE  &kp COLON  &kp FSLH   &trans
+&trans  &kp BSLH         &trans    &kp PIPE  &kp MINUS  &trans  &trans    &trans  &trans  &kp UNDER  &trans    &trans     &kp FSLH   &trans
                          &trans    &trans    &trans     &trans  &trans    &trans  &trans  &trans     &trans    &trans
             >;
 
