@@ -16,5 +16,7 @@ include:
     artifact-name: sofle_right
   - board: seeeduino_xiao_ble
     shield: totem_left
+    artifact-name: totem_left
   - board: seeeduino_xiao_ble
     shield: totem_right
+    artifact-name: totem_right
