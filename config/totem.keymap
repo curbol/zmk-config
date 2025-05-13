@@ -210,7 +210,7 @@
 
         func_layer {
             if-layers = <6 4>;
-            then-layer = <7>;
+            then-layer = <6>;
         };
     };
 
@@ -225,7 +225,7 @@
            &kp Q           &kp W          &kp E           &kp R           &kp T          &kp Y        &kp U                 &kp I           &kp O          &kp P
            &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G          &kp H        &hrm_r LCTRL J        &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT
 &kp GRAVE  &kp Z           &kp X          &kp C           &kp V           &kp B          &kp N        &kp M                 &comma_morph    &dot_morph     &qexcl            &kp MINUS
-                                          &kp DEL         &esc_morph      &lt_spc 6 0    &lt 4 ENTER  &magic_shift LSHFT 0  &sl 5
+                                          &kp DEL         &esc_morph      &lt_spc 4 0    &lt 5 ENTER  &magic_shift LSHFT 0  &sl 5
             >;
         };
 
@@ -262,33 +262,22 @@
         symbol_layer {
             display-name = "sym";
             bindings = <
-        &kp AT             &kp HASH  &kp AMPS  &kp STAR           &trans    &trans  &kp CARET           &kp DLLR           &kp PRCNT         &kp TILDE
-        &kp BSLH           &lpar_lt  &rpar_gt  &kp PLUS           &trans    &trans  &kp EQUAL           &kp LBKT           &kp RBKT          &kp FSLH
-&trans  &trans             &trans    &kp PIPE  &kp MINUS          &trans    &trans  &kp UNDER           &trans             &trans            &trans             &trans
-                                     &trans    &trans             &trans    &trans  &trans              &trans
+        &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp DLLR  &kp PRCNT  &kp TILDE
+        &kp BSLH  &lpar_lt  &rpar_gt  &kp PLUS   &trans    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &kp FSLH
+&trans  &trans    &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &trans     &trans
+                            &trans    &trans     &trans    &trans  &trans     &trans
             >;
         };
 
-        number_layer {
+        numnav_layer {
             bindings = <
-        &trans   &kp N7  &kp N8  &kp N9  &trans    &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans
+        &trans           &kp N7          &kp N8           &kp N9           &trans    &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans
         &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans  &kp DOT  &kp N1  &kp N2  &kp N3  &trans    &trans     &trans    &trans    &trans     &trans  &trans
-                         &trans  &trans  &trans    &trans     &trans    &trans
+&trans  &kp DOT          &kp N1          &kp N2           &kp N3           &trans    &trans     &trans    &trans    &trans     &trans  &trans
+                                         &trans           &trans           &trans    &trans     &trans    &trans
             >;
 
-            label = "num";
-        };
-
-        navigation_layer {
-            bindings = <
-        &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans    &trans  &trans  &trans  &trans  &trans
-        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans    &trans     &trans    &trans  &trans  &trans
-            >;
-
-            label = "nav";
+            label = "numnav";
         };
 
         function_layer {
