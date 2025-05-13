@@ -207,7 +207,7 @@
         compatible = "zmk,conditional-layers";
 
         func_layer {
-            if-layers = <6 4>;
+            if-layers = <4 5>;
             then-layer = <6>;
         };
     };
