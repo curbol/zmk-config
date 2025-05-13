@@ -62,7 +62,7 @@
             flavor = "balanced";
             hold-trigger-on-release;
             require-prior-idle-ms = <150>;
-            hold-trigger-key-positions = <54 53 55 56 57 41 40 39 38 52 37 36 35 34 33 32 25 24 23 22 21 20 10 11 12 13 14 4 3 2 1 0>;
+            hold-trigger-key-positions = <32 33 34 35 36 37 25 24 14 13 23 12 4 3 2 1 11 22 21 10 0 20>;
         };
 
         // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
