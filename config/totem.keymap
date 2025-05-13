@@ -225,38 +225,13 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer {
-            if-layers = <3 4>;
-            then-layer = <5>;
+        func_layer {
+            if-layers = <4 5>;
+            then-layer = <6>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <38 39>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
-        paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <39 40>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-    };
-
-    macros {
-        vim_save: vim_save {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESC &kp COLON &kp W &kp A &kp ENTER>;
-            label = "VIM_SAVE";
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
