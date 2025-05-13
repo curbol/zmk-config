@@ -136,7 +136,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Tap: esc | Shift + tap: bspc | Ctrl + shift + tap: del.
+        // Tap: esc | Shift + tap: bspc
 
         esc_morph: esc_morph {
             compatible = "zmk,behavior-mod-morph";
@@ -263,7 +263,7 @@
             display-name = "sym";
             bindings = <
         &kp AT             &kp HASH  &kp AMPS  &kp STAR           &trans    &trans  &kp CARET           &kp DLLR           &kp PRCNT         &kp TILDE
-        &hrm_l LMETA BSLH  &lpar_lt  &rpar_gt  &hrm_l LCTRL PLUS  &trans    &trans  &hrm_r LCTRL EQUAL  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT  &hrm_r LMETA FSLH
+        &kp BSLH           &lpar_lt  &rpar_gt  &kp PLUS           &trans    &trans  &kp EQUAL           &kp LBKT           &kp RBKT          &kp FSLH
 &trans  &trans             &trans    &kp PIPE  &kp MINUS          &trans    &trans  &kp UNDER           &trans             &trans            &trans             &trans
                                      &trans    &trans             &trans    &trans  &trans              &trans
             >;
@@ -272,7 +272,7 @@
         number_layer {
             bindings = <
         &trans   &kp N7  &kp N8  &kp N9  &trans    &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans
-        &kp N0   &kp N4  &kp N5  &kp N6  &trans    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans  &kp DOT  &kp N1  &kp N2  &kp N3  &trans    &trans     &trans    &trans    &trans     &trans  &trans
                          &trans  &trans  &trans    &trans     &trans    &trans
             >;
