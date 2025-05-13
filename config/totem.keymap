@@ -219,7 +219,7 @@
         compatible = "zmk,conditional-layers";
 
         func_layer {
-            if-layers = <4 5>;
+            if-layers = <6 4>;
             then-layer = <7>;
         };
     };
@@ -262,9 +262,9 @@
         gaming2_layer {
             display-name = "game2";
             bindings = <
-        &trans  &kp N4  &kp N5  &kp N6  &kp T     &trans  &trans  &trans  &trans  &trans
-        &trans  &kp N1  &kp N2  &kp N3  &kp G     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp N7  &kp N8  &kp N9  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &kp T     &trans  &trans  &trans  &trans  &trans
+        &kp N1  &kp N2  &kp N3  &kp N4  &kp G     &trans  &tog 2  &trans  &trans  &trans
+&trans  &kp N5  &kp N6  &kp N7  &kp N8  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 2   &trans    &trans  &trans  &trans
             >;
         };
@@ -274,7 +274,7 @@
             bindings = <
         &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp DLLR  &kp PRCNT  &kp TILDE
         &kp BSLH  &lpar_lt  &rpar_gt  &kp PLUS   &trans    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &kp FSLH
-&trans  &trans    &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &trans   &trans
+&trans  &trans    &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &trans     &trans
                             &trans    &trans     &trans    &trans  &trans     &trans
             >;
         };
@@ -282,8 +282,8 @@
         number_layer {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp DOT
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N0  &kp N1  &kp N2  &kp N3  &trans   &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp N0
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &kp DOT  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
@@ -306,7 +306,7 @@
             bindings = <
         &kp F12  &kp F7  &kp F8  &kp F9  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_PRV    &tog 2        &tog 1        &bt BT_NXT    &bt_clr
-&trans  &kp F10  &kt F1  &kp F2  &kp F3  &trans    &trans        &trans        &trans        &trans        &trans      &trans
+&trans  &kp F10  &kt F1  &kp F2  &kp F3  &trans    &trans        &trans        &trans        &trans        &trans        &trans
                          &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
