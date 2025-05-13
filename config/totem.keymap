@@ -258,8 +258,8 @@
         symbol_layer {
             display-name = "sym";
             bindings = <
-        &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp PRCNT  &kp DLLR  &kp TILDE
-        &kp BSLH  &kp PIPE  &kp LBKT  &kp RBKT   &trans    &trans  &kp MINUS  &kp EQUAL  &kp PLUS   &kp FSLH
+        &kp AT    &kp AMPS  &kp HASH  &kp PIPE   &trans    &trans  &kp CARET  &kp PRCNT  &kp DLLR  &kp TILDE
+        &kp BSLH  &kp STAR  &kp LBKT  &kp RBKT   &trans    &trans  &kp MINUS  &kp EQUAL  &kp PLUS   &kp FSLH
 &trans  &trans    &trans    &lpar_lt  &rpar_gt   &trans    &trans  &kp UNDER  &trans    &trans     &trans     &trans
                             &trans    &trans     &trans    &trans  &trans     &trans
             >;
