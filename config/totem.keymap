@@ -273,8 +273,8 @@
             display-name = "sym";
             bindings = <
         &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp DLLR  &kp PRCNT  &kp TILDE
-        &trans    &lpar_lt  &rpar_gt  &kp PLUS   &trans    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &trans
-&trans  &kp BSLH  &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &kp FSLH   &trans
+        &kp BSLH  &lpar_lt  &rpar_gt  &kp PLUS   &trans    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &kp FSLH
+&trans  &trans    &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &trans   &trans
                             &trans    &trans     &trans    &trans  &trans     &trans
             >;
         };
@@ -305,8 +305,8 @@
             display-name = "func";
             bindings = <
         &kp F12  &kp F7  &kp F8  &kp F9  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_PRV    &trans        &trans        &bt BT_NXT    &trans
-&trans  &kp F10  &kt F1  &kp F2  &kp F3  &trans    &trans        &tog 2        &tog 1        &trans        &bt_clr       &trans
+        &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_PRV    &tog 2        &tog 1        &bt BT_NXT    &bt_clr
+&trans  &kp F10  &kt F1  &kp F2  &kp F3  &trans    &trans        &trans        &trans        &trans        &trans      &trans
                          &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
