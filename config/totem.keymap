@@ -226,8 +226,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <3 5>;
-            then-layer = <4>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -269,17 +269,17 @@
            &kp Q           &kp W          &kp E           &kp R           &kp T          &kp Y        &kp U                 &kp I           &kp O          &kp P
            &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G          &kp H        &hrm_r LCTRL J        &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT
 &kp GRAVE  &kp Z           &kp X          &kp C           &kp V           &kp B          &kp N        &kp M                 &comma_morph    &dot_morph     &qexcl            &kp MINUS
-                                          &kp DEL         &esc_morph      &lt_spc 5 0    &lt 4 ENTER  &magic_shift LSHFT 0  &lt 4 A
+                                          &kp DEL         &esc_morph      &lt_spc 5 0    &lt 4 ENTER  &magic_shift LSHFT 0  &lt 5 A
             >;
         };
 
         graphite_layer {
             display-name = "graphite";
             bindings = <
-           &kp B           &kp L          &kp D           &kp W           &kp Z          &kp SQT      &kp F                 &kp O           &kp U          &kp J
-           &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S  &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I
-&kp GRAVE  &kp Q           &kp X          &kp M           &kp C           &kp V          &kp K        &kp P                 &comma_morph    &dot_morph     &qexcl          &kp MINUS
-                                          &trans          &esc_morph      &lt_spc 5 0    &lt 4 ENTER  &magic_shift LSHFT 0  &trans
+        &kp B           &kp L          &kp D           &kp W           &kp Z     &kp SQT  &kp F           &kp O           &kp U          &kp J
+        &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S  &kp G     &kp Y    &hrm_r LCTRL H  &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I
+&trans  &kp Q           &kp X          &kp M           &kp C           &kp V     &kp K    &kp P           &trans          &trans         &trans          &trans
+                                       &trans          &trans          &trans    &trans   &trans          &trans
             >;
         };
 
@@ -289,27 +289,17 @@
          &kp TAB    &kp Q  &kp W     &kp E  &kp R        &kp Y        &kp U                 &kp I           &kp O          &kp P
          &kp LSHFT  &kp A  &kp S     &kp D  &kp F        &kp H        &hrm_r LCTRL J        &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA APOS
 &kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &kp N        &kp M                 &comma_morph    &dot_morph     &qexcl             &kp MINUS
-                           &kp LALT  &sl 3  &kp SPACE    &lt 4 ENTER  &magic_shift LSHFT 0  &trans
+                           &kp LALT  &sl 3  &kp SPACE    &lt 5 ENTER  &magic_shift LSHFT 0  &trans
             >;
         };
 
         gaming2_layer {
             display-name = "game2";
             bindings = <
-         &kp TAB    &kp N4  &kp N5    &kp N6  &kp T        &kp Y        &kp U                 &kp I         &kp O       &kp P
-         &kp LSHFT  &kp N1  &kp N2    &kp N3  &kp G        &kp H        &kp J                 &kp K         &kp L       &kp APOS
-&kp ESC  &kp LCTRL  &kp N7  &kp N8    &kp N9  &kp B        &kp N        &kp M                 &comma_morph  &dot_morph  &qexcl    &kp MINUS
-                            &kp LALT  &to 2   &kp SPACE    &lt 4 ENTER  &magic_shift LSHFT 0  &trans
-            >;
-        };
-
-        num_nav_layer {
-            display-name = "numnav";
-            bindings = <
-        &trans           &kp N4          &kp N5           &kp N6           &trans    &trans    &kp HOME   &kp END    &trans     &trans
-        &hrm_l LMETA N0  &hrm_l LALT N1  &hrm_l LSHFT N2  &hrm_l LCTRL N3  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans           &kp N7          &kp N8           &kp N9           &trans    &trans    &kp PG_DN  &kp PG_UP  &vim_save  &trans  &trans
-                                         &trans           &trans           &trans    &trans    &trans     &trans
+        &trans  &kp N4  &kp N5  &kp N6  &kp T     &kp Y   &kp U   &kp I   &kp O   &kp P
+        &trans  &kp N1  &kp N2  &kp N3  &kp G     &kp H   &kp J   &kp K   &kp L   &kp SQT
+&trans  &trans  &kp N7  &kp N8  &kp N9  &kp B     &kp N   &kp M   &trans  &trans  &trans   &trans
+                        &trans  &to 2   &trans    &trans  &trans  &trans
             >;
         };
 
@@ -320,6 +310,16 @@
         &trans    &lpar_lt  &rpar_gt  &kp PLUS   &trans    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &trans
 &trans  &kp BSLH  &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &kp FSLH   &trans
                             &trans    &trans     &trans    &trans  &trans     &trans
+            >;
+        };
+
+        num_nav_layer {
+            display-name = "numnav";
+            bindings = <
+        &trans           &kp N4          &kp N5           &kp N6           &trans    &trans    &kp HOME   &kp END    &trans     &trans
+        &hrm_l LMETA N0  &hrm_l LALT N1  &hrm_l LSHFT N2  &hrm_l LCTRL N3  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &trans           &kp N7          &kp N8           &kp N9           &trans    &trans    &kp PG_DN  &kp PG_UP  &vim_save  &trans  &trans
+                                         &trans           &trans           &trans    &trans    &trans     &trans
             >;
         };
 
