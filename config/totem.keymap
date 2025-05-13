@@ -141,20 +141,10 @@
         esc_morph: esc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "ESC_MORPH";
-            bindings = <&kp ESC>, <&esc_inner_morph>;
+            bindings = <&kp ESC>, <&kp BSPC>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        esc_inner_morph: esc_inner_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ESC_INNER_MORPH";
-            bindings = <&kp BSPC>, <&kp DEL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_RSFT)>;
         };
 
         // Tap: space | Shift + tap: tab | Hold: nav layer.
@@ -272,19 +262,19 @@
         symbol_layer {
             display-name = "sym";
             bindings = <
-        &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp DLLR  &kp PRCNT  &kp TILDE
-        &hrm_l LMETA BSLH  &lpar_lt  &rpar_gt  &hrm_l LCTRL PLUS   &trans    &trans  &hrm_r LCTRL EQUAL  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT   &hrm_r LMETA FSLH
-&trans  &trans    &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &trans     &trans
-                            &trans    &trans     &trans    &trans  &trans     &trans
+        &kp AT             &kp HASH  &kp AMPS  &kp STAR           &trans    &trans  &kp CARET           &kp DLLR           &kp PRCNT         &kp TILDE
+        &hrm_l LMETA BSLH  &lpar_lt  &rpar_gt  &hrm_l LCTRL PLUS  &trans    &trans  &hrm_r LCTRL EQUAL  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT  &hrm_r LMETA FSLH
+&trans  &trans             &trans    &kp PIPE  &kp MINUS          &trans    &trans  &kp UNDER           &trans             &trans            &trans             &trans
+                                     &trans    &trans             &trans    &trans  &trans              &trans
             >;
         };
 
         number_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp N7           &kp N8           &kp N9          &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &hrm_r LCTRL N4  &hrm_r RSHFT N5  &hrm_r LALT N6  &hrm_r LMETA N0
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &kp DOT  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1           &kp N2           &kp N3          &kp DOT          &trans
+                        &trans  &trans  &trans    &trans  &trans           &trans
             >;
 
             label = "num";
