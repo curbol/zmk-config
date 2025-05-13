@@ -203,8 +203,6 @@
         };
     };
 
-    // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -213,8 +211,6 @@
             then-layer = <6>;
         };
     };
-
-    // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
     keymap {
         compatible = "zmk,keymap";
@@ -262,22 +258,21 @@
         symbol_layer {
             display-name = "sym";
             bindings = <
-        &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp DLLR  &kp PRCNT  &kp TILDE
-        &kp BSLH  &lpar_lt  &rpar_gt  &kp PLUS   &trans    &trans  &kp EQUAL  &kp LBKT  &kp RBKT   &kp FSLH
-&trans  &trans    &trans    &kp PIPE  &kp MINUS  &trans    &trans  &kp UNDER  &trans    &trans     &trans     &trans
+        &kp AT    &kp HASH  &kp AMPS  &kp STAR   &trans    &trans  &kp CARET  &kp PRCNT  &kp DLLR  &kp TILDE
+        &kp BSLH  &kp PIPE  &kp LBKT  &kp RBKT   &trans    &trans  &kp MINUS  &kp EQUAL  &kp PLUS   &kp FSLH
+&trans  &trans    &trans    &lpar_lt  &rpar_gt   &trans    &trans  &kp UNDER  &trans    &trans     &trans     &trans
                             &trans    &trans     &trans    &trans  &trans     &trans
             >;
         };
 
         numnav_layer {
+            display-name = "numnav";
             bindings = <
         &trans           &kp N7          &kp N8           &kp N9           &trans    &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans
         &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans  &kp DOT          &kp N1          &kp N2           &kp N3           &trans    &trans     &trans    &trans    &trans     &trans  &trans
                                          &trans           &trans           &trans    &trans     &trans    &trans
             >;
-
-            label = "numnav";
         };
 
         function_layer {
