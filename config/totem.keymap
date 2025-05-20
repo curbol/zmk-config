@@ -156,6 +156,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         lt_spc: lt_spc {
@@ -196,7 +197,7 @@
         magic_shift_tap: magic_shift_tap {
             compatible = "zmk,behavior-mod-morph";
             label = "MAGIC_SHIFT_TAP";
-            bindings = <&kp LSHFT>, <&caps_word>;
+            bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
