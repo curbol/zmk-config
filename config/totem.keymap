@@ -218,20 +218,20 @@
         base_layer {
             display-name = "base";
             bindings = <
-           &kp Q           &kp W          &kp E           &kp R           &kp T          &kp Y        &kp U                 &kp I           &kp O          &kp P
-           &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G          &kp H        &hrm_r LCTRL J        &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT
-&kp GRAVE  &kp Z           &kp X          &kp C           &kp V           &kp B          &kp N        &kp M                 &comma_morph    &dot_morph     &qexcl            &kp MINUS
+           &kp B           &kp L          &kp D           &kp W           &kp Z          &kp APOS     &kp F                 &kp O           &kp U          &kp J
+           &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S  &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I
+&kp GRAVE  &kp Q           &kp X          &kp M           &kp C           &kp V          &kp K        &kp P                 &comma_morph    &dot_morph     &qexcl          &kp MINUS
                                           &kp DEL         &esc_morph      &lt_spc 4 0    &lt 5 ENTER  &magic_shift LSHFT 0  &sl 5
             >;
         };
 
-        graphite_layer {
-            display-name = "graphite";
+        qwerty_layer {
+            display-name = "qwerty";
             bindings = <
-        &kp B           &kp L          &kp D           &kp W           &kp Z     &kp SQT  &kp F           &kp O           &kp U          &kp J
-        &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S  &kp G     &kp Y    &hrm_r LCTRL H  &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I
-&trans  &kp Q           &kp X          &kp M           &kp C           &kp V     &kp K    &kp P           &trans          &trans         &trans          &trans
-                                       &trans          &trans          &trans    &trans   &trans          &trans
+        &kp Q           &kp W          &kp E           &kp R           &kp T     &kp Y   &kp U           &kp I           &kp O          &kp P
+        &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G     &kp H   &hrm_r LCTRL J  &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT
+&trans  &kp Z           &kp X          &kp C           &kp V           &kp B     &kp N   &kp M           &trans          &trans         &trans            &trans
+                                       &trans          &trans          &trans    &trans  &trans          &trans
             >;
         };
 
@@ -249,7 +249,7 @@
             display-name = "game2";
             bindings = <
         &trans  &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
-        &trans  &kp N4  &kp N5  &kp N6  &kp G     &trans  &tog 2  &trans  &trans  &trans
+        &trans  &kp N4  &kp N5  &kp N6  &kp G     &trans  &tog 3  &trans  &trans  &trans
 &trans  &trans  &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
                         &kp F5  &to 2   &trans    &trans  &trans  &trans
             >;
@@ -279,7 +279,7 @@
             display-name = "func";
             bindings = <
         &kp F12  &kp F7  &kp F8  &kp F9  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_PRV    &tog 2        &tog 1        &bt BT_NXT    &bt_clr
+        &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_PRV    &tog 3        &tog 2        &bt BT_NXT    &bt_clr
 &trans  &kp F10  &kt F1  &kp F2  &kp F3  &trans    &trans        &trans        &trans        &trans        &trans        &trans
                          &trans  &trans  &trans    &trans        &trans        &trans
             >;
