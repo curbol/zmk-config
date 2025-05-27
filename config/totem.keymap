@@ -141,10 +141,10 @@
         esc_morph: esc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "ESC_MORPH";
-            bindings = <&kp ESC>, <&kp BSPC>;
+            bindings = <&kp BSPC>, <&kp ESC>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         // Tap: space | Shift + tap: tab | Hold: nav layer.
