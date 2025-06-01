@@ -73,7 +73,7 @@
             bindings = <&kp COMMA>, <&comma_inner_morph>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         comma_inner_morph: comma_inner_morph {
@@ -93,7 +93,7 @@
             bindings = <&kp DOT>, <&dot_inner_morph>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         dot_inner_morph: dot_inner_morph {
@@ -113,7 +113,7 @@
             bindings = <&kp QMARK>, <&kp EXCL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
