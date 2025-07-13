@@ -138,9 +138,9 @@
 
         // Tap: esc | Shift + tap: bspc
 
-        esc_morph: esc_morph {
+        bksp_esc_morph: bksp_esc_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "ESC_MORPH";
+            label = "BKSP_ESC_MORPH";
             bindings = <&kp BSPC>, <&kp ESC>;
 
             #binding-cells = <0>;
@@ -219,10 +219,10 @@
         base_layer {
             display-name = "base";
             bindings = <
-           &kp B           &kp L          &kp D                  &kp W           &kp Z          &kp APOS     &kp F                 &kp O                      &kp U          &kp J
-           &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T         &hrm_l LCTRL S  &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A             &hrm_r LALT E  &hrm_r LMETA I
-&kp GRAVE  &kp Q           &kp X          &kp M                  &kp C           &kp V          &kp K        &kp P                 &comma_morph               &dot_morph     &qexcl          &kp MINUS
-                                          &mt LS(LA(LCTRL)) DEL  &esc_morph      &lt_spc 4 0    &lt 5 ENTER  &magic_shift LSHFT 0  &mt LS(LA(LC(LMETA))) TAB
+           &kp B           &kp L          &kp D                  &kp W            &kp Z          &kp APOS     &kp F                 &kp O                      &kp U          &kp J
+           &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T         &hrm_l LCTRL S   &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A             &hrm_r LALT E  &hrm_r LMETA I
+&kp GRAVE  &kp Q           &kp X          &kp M                  &kp C            &kp V          &kp K        &kp P                 &comma_morph               &dot_morph     &qexcl          &kp DOUBLE_QUOTES
+                                          &mt LS(LA(LCTRL)) DEL  &bksp_esc_morph  &lt_spc 4 0    &lt 5 ENTER  &magic_shift LSHFT 0  &mt LS(LA(LC(LMETA))) TAB
             >;
         };
 
