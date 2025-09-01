@@ -188,6 +188,11 @@
             if-layers = <3 4>;
             then-layer = <5>;
         };
+
+        game_func {
+            if-layers = <2 5>;
+            then-layer = <5>;
+        };
     };
 
     keymap {
