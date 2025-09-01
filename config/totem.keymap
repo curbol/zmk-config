@@ -216,10 +216,10 @@
         game2_layer {
             display-name = "game2";
             bindings = <
-         &kp I  &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
-         &mo 5  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
-&kp ESC  &kp J  &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+         &kp I     &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
+         &lt 5 N0  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp J     &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -227,7 +227,7 @@
             display-name = "symbol";
             bindings = <
         &kp AT             &kp AMPS          &kp HASH           &kp PRCNT          &trans    &trans  &kp CARET           &kp TILDE           &kp DLLR          &kp PIPE
-        &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &tog 1  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
+        &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
 &trans  &trans             &trans            &lpar_lt           &rpar_gt           &trans    &trans  &kp UNDER           &trans              &trans            &trans             &trans
                                              &trans             &trans             &trans    &trans  &trans              &trans
             >;
@@ -237,7 +237,7 @@
             display-name = "numnav";
             bindings = <
         &trans           &kp N7          &kp N8           &kp N9           &trans    &kp PG_UP   &kp HOME    &kp UP    &kp END    &kp C_VOL_UP
-        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp PG_DN   &kp LEFT    &kp DOWN  &kp RIGHT  &kp C_VOL_DN
+        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &tog 1    &kp PG_DN   &kp LEFT    &kp DOWN  &kp RIGHT  &kp C_VOL_DN
 &trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PREV  &kp C_NEXT  &trans    &trans     &trans        &kp C_PP
                                          &trans           &trans           &trans    &trans      &trans      &trans
             >;
