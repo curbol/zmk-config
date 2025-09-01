@@ -136,7 +136,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Tap: esc | Shift + tap: bspc
+        // Tap: bspc | Shift + tap: esc
 
         bksp_esc_morph: bksp_esc_morph {
             compatible = "zmk,behavior-mod-morph";
@@ -147,7 +147,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        // Tap: space | Shift + tap: tab | Hold: nav layer.
         // Tap: BT_CLR | Shift + tap: BT_CLR_ALL.
 
         bt_clr: bt_clr {
@@ -225,7 +224,7 @@
         };
 
         symbol_layer {
-            display-name = "sym";
+            display-name = "symbol";
             bindings = <
         &kp AT             &kp AMPS          &kp HASH           &kp PRCNT          &trans    &trans  &kp CARET           &kp TILDE           &kp DLLR          &kp PIPE
         &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &tog 1  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
