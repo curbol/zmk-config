@@ -201,9 +201,9 @@
         base_layer {
             display-name = "base";
             bindings = <
-           &kp B           &kp L          &kp D                  &kp W            &kp Z          &kp APOS     &kp F                 &kp O                      &kp U          &kp J
+           &kp B           &kp L          &kp D                  &kp W            &kp Z          &kp MINUS    &kp F                 &kp O                      &kp U          &kp J
            &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T         &hrm_l LCTRL S   &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A             &hrm_r LALT E  &hrm_r LMETA I
-&kp GRAVE  &kp Q           &kp X          &kp M                  &kp C            &kp V          &kp K        &kp P                 &comma_morph               &dot_morph     &qexcl          &kp MINUS
+&kp GRAVE  &kp Q           &kp X          &kp M                  &kp C            &kp V          &kp K        &kp P                 &comma_morph               &dot_morph     &qexcl          &kp SQT
                                           &mt LS(LA(LCTRL)) DEL  &bksp_esc_morph  &lt 1 SPACE    &lt 2 ENTER  &magic_shift LSHFT 0  &mt LS(LA(LC(LMETA))) TAB
             >;
         };
@@ -221,10 +221,10 @@
         numnav_layer {
             display-name = "numnav";
             bindings = <
-        &trans           &kp N7          &kp N8           &kp N9           &trans    &kp PG_UP   &kp HOME    &kp UP    &kp END    &kp C_VOL_UP
-        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp PG_DN   &kp LEFT    &kp DOWN  &kp RIGHT  &kp C_VOL_DN
-&trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PREV  &kp C_NEXT  &trans    &trans     &tog 3        &kp C_PP
-                                         &trans           &trans           &trans    &trans      &trans      &trans
+        &trans           &kp N7          &kp N8           &kp N9           &trans    &kp C_VOL_UP  &kp HOME  &kp UP    &kp END    &kp PG_UP
+        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
+&trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PP      &trans    &trans    &trans     &trans     &tog 3
+                                         &trans           &trans           &trans    &trans        &trans    &trans
             >;
         };
 
