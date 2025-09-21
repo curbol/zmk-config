@@ -121,7 +121,7 @@
         lpar_lt: lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             label = "LPAR_LT";
-            bindings = <&kp LPAR>, <&kp LT>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -130,7 +130,7 @@
         rpar_gt: rpar_gt {
             compatible = "zmk,behavior-mod-morph";
             label = "RPAR_GT";
-            bindings = <&kp RPAR>, <&kp GT>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -211,10 +211,10 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-        &kp AT             &kp AMPS          &kp HASH           &kp PRCNT          &trans    &trans  &kp CARET           &kp TILDE           &kp DLLR          &kp PIPE
-        &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
-&trans  &trans             &trans            &lpar_lt           &rpar_gt           &trans    &trans  &kp UNDER           &kp LT              &kp GT            &trans             &trans
-                                             &trans             &trans             &trans    &trans  &trans              &trans
+           &kp AT_SIGN        &kp AMPERSAND     &kp POUND          &kp PERCENT        &trans    &trans  &kp CARET           &kp TILDE           &kp DOLLAR        &kp PIPE
+           &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
+&kp TILDE  &lpar_lt           &kp LEFT_BRACE    &kp RIGHT_BRACE    &rpar_gt           &trans    &trans  &kp UNDERSCORE      &kp LESS_THAN       &kp GREATER_THAN  &kp EXCLAMATION    &kp DOUBLE_QUOTES
+                                                &trans             &trans             &trans    &trans  &trans              &trans
             >;
         };
 
