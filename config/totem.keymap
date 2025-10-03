@@ -121,7 +121,7 @@
         lpar_lt: lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             label = "LPAR_LT";
-            bindings = <&kp LPAR>, <&kp LT>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -130,13 +130,13 @@
         rpar_gt: rpar_gt {
             compatible = "zmk,behavior-mod-morph";
             label = "RPAR_GT";
-            bindings = <&kp RPAR>, <&kp GT>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Tap: esc | Shift + tap: bspc
+        // Tap: bspc | Shift + tap: esc
 
         bksp_esc_morph: bksp_esc_morph {
             compatible = "zmk,behavior-mod-morph";
@@ -145,29 +145,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-        };
-
-        // Tap: space | Shift + tap: tab | Hold: nav layer.
-
-        spc_morph: spc_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPC_MORPH";
-            bindings = <&kp SPACE>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
-
-        lt_spc: lt_spc {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_SPC";
-            bindings = <&mo>, <&spc_morph>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
         };
 
         // Tap: BT_CLR | Shift + tap: BT_CLR_ALL.
@@ -208,8 +185,13 @@
         compatible = "zmk,conditional-layers";
 
         func_layer {
+            if-layers = <1 2>;
+            then-layer = <5>;
+        };
+
+        game_func {
             if-layers = <4 5>;
-            then-layer = <6>;
+            then-layer = <5>;
         };
     };
 
@@ -219,70 +201,60 @@
         base_layer {
             display-name = "base";
             bindings = <
-           &kp B           &kp L          &kp D                  &kp W            &kp Z          &kp APOS     &kp F                 &kp O                      &kp U          &kp J
+           &kp B           &kp L          &kp D                  &kp W            &kp Z          &kp MINUS    &kp F                 &kp O                      &kp U          &kp J
            &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T         &hrm_l LCTRL S   &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A             &hrm_r LALT E  &hrm_r LMETA I
-&kp GRAVE  &kp Q           &kp X          &kp M                  &kp C            &kp V          &kp K        &kp P                 &comma_morph               &dot_morph     &qexcl          &kp DOUBLE_QUOTES
-                                          &mt LS(LA(LCTRL)) DEL  &bksp_esc_morph  &lt_spc 4 0    &lt 5 ENTER  &magic_shift LSHFT 0  &mt LS(LA(LC(LMETA))) TAB
-            >;
-        };
-
-        qwerty_layer {
-            display-name = "qwerty";
-            bindings = <
-        &kp Q           &kp W          &kp E           &kp R           &kp T     &kp Y   &kp U           &kp I           &kp O          &kp P
-        &hrm_l LMETA A  &hrm_l LALT S  &hrm_l LSHFT D  &hrm_l LCTRL F  &kp G     &kp H   &hrm_r LCTRL J  &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA SQT
-&trans  &kp Z           &kp X          &kp C           &kp V           &kp B     &kp N   &kp M           &trans          &trans         &trans            &trans
-                                       &trans          &trans          &trans    &trans  &trans          &trans
-            >;
-        };
-
-        gaming_layer {
-            display-name = "game";
-            bindings = <
-         &kp TAB    &kp Q  &kp W     &kp E  &kp R        &kp Y   &kp U           &kp I           &kp O          &kp P
-         &kp LSHFT  &kp A  &kp S     &kp D  &kp F        &kp H   &hrm_r LCTRL J  &hrm_r RSHFT K  &hrm_r LALT L  &hrm_r LMETA APOS
-&kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &kp N   &kp M           &trans          &trans         &trans             &trans
-                           &kp LALT  &sl 3  &kp SPACE    &trans  &trans          &trans
-            >;
-        };
-
-        gaming2_layer {
-            display-name = "game2";
-            bindings = <
-        &kp I  &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
-        &kp M  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
-&trans  &kp J  &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &tog 2
-                       &kp F5  &to 2   &trans    &trans  &trans  &kp F8
+&kp GRAVE  &kp Q           &kp X          &kp M                  &kp C            &kp V          &kp K        &kp P                 &comma_morph               &dot_morph     &qexcl          &kp SQT
+                                          &mt LS(LA(LCTRL)) DEL  &bksp_esc_morph  &lt 1 SPACE    &lt 2 ENTER  &magic_shift LSHFT 0  &mt LS(LA(LC(LMETA))) TAB
             >;
         };
 
         symbol_layer {
-            display-name = "sym";
+            display-name = "symbol";
             bindings = <
-        &kp AT             &kp AMPS          &kp HASH           &kp PRCNT          &trans    &trans  &kp CARET           &kp TILDE           &kp DLLR          &kp PIPE
-        &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
-&trans  &trans             &trans            &lpar_lt           &rpar_gt           &trans    &trans  &kp UNDER           &trans              &trans            &trans             &trans
-                                             &trans             &trans             &trans    &trans  &trans              &trans
+           &kp AT_SIGN        &kp AMPERSAND     &kp POUND          &kp PERCENT        &trans    &trans  &kp CARET           &kp TILDE           &kp DOLLAR        &kp PIPE
+           &hrm_l LMETA BSLH  &hrm_l LALT STAR  &hrm_l LSHFT LBKT  &hrm_l LCTRL RBKT  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT EQUAL  &hrm_r LALT PLUS  &hrm_r LMETA FSLH
+&kp TILDE  &lpar_lt           &kp LEFT_BRACE    &kp RIGHT_BRACE    &rpar_gt           &trans    &trans  &kp UNDERSCORE      &kp LESS_THAN       &kp GREATER_THAN  &kp EXCLAMATION    &kp DOUBLE_QUOTES
+                                                &trans             &trans             &trans    &trans  &trans              &trans
             >;
         };
 
         numnav_layer {
             display-name = "numnav";
             bindings = <
-        &trans           &kp N7          &kp N8           &kp N9           &trans    &kp PG_UP   &kp HOME    &kp UP    &kp END    &kp C_VOL_UP
-        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp PG_DN   &kp LEFT    &kp DOWN  &kp RIGHT  &kp C_VOL_DN
-&trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PREV  &kp C_NEXT  &trans    &trans     &trans        &kp C_PP
-                                         &trans           &trans           &trans    &trans      &trans      &trans
+        &trans           &kp N7          &kp N8           &kp N9           &trans    &kp C_VOL_UP  &kp HOME  &kp UP    &kp END    &kp PG_UP
+        &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
+&trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PP      &trans    &trans    &trans     &trans     &tog 3
+                                         &trans           &trans           &trans    &trans        &trans    &trans
+            >;
+        };
+
+        game_layer {
+            display-name = "game";
+            bindings = <
+       &kp TAB    &kp Q  &kp W     &kp E    &kp R        &trans  &trans  &trans  &trans  &trans
+       &kp LSHFT  &kp A  &kp S     &kp D    &kp F        &trans  &trans  &trans  &trans  &trans
+&kp M  &kp LCTRL  &kp Z  &kp X     &kp C    &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                         &kp LALT  &lt 4 G  &kp SPACE    &trans  &trans  &trans
+            >;
+        };
+
+        game2_layer {
+            display-name = "game2";
+            bindings = <
+         &kp I    &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
+         &lt 5 N  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp J    &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         function_layer {
             display-name = "func";
             bindings = <
-        &kp F12  &kp F7  &kp F8  &kp F9  &trans    &bt_clr       &bt BT_PRV    &trans        &bt BT_NXT    &trans
-        &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans        &trans        &trans        &trans        &trans
-&tog 1  &kp F10  &kt F1  &kp F2  &kp F3  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &tog 2
-                         &trans  &trans  &trans    &trans        &trans        &trans
+        &trans  &kp F7  &kp F8  &kp F9  &kp F10    &bt_clr       &trans  &trans  &trans  &trans
+        &trans  &kp F4  &kp F5  &kp F6  &kp F11    &bt BT_SEL 0  &trans  &trans  &trans  &trans
+&trans  &trans  &kt F1  &kp F2  &kp F3  &kp F12    &bt BT_SEL 1  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans     &trans        &trans  &trans
             >;
         };
     };
