@@ -241,10 +241,10 @@
         game2_layer {
             display-name = "game2";
             bindings = <
-         &kp I    &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
-         &lt 5 N  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
-&kp ESC  &kp J    &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
+           &kp I         &kp N7    &mt W N8  &kp N9    &kp T     &trans  &trans  &trans  &trans  &trans
+           &mt LSHIFT N  &mt A N4  &mt S N5  &mt D N6  &kp G     &trans  &trans  &trans  &trans  &trans
+&lt 5 ESC  &mt LCTRL J   &kp N1    &kp N2    &kp N3    &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans    &trans    &trans    &trans  &trans  &trans
             >;
         };
 
