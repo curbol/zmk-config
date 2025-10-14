@@ -190,7 +190,7 @@
         };
 
         game_func {
-            if-layers = <4 2>;
+            if-layers = <4 5>;
             then-layer = <5>;
         };
     };
@@ -223,7 +223,7 @@
             bindings = <
         &trans           &kp N7          &kp N8           &kp N9           &trans    &kp C_VOL_UP  &kp HOME  &kp UP    &kp END    &kp PG_UP
         &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans    &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
-&trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PP      &trans    &trans    &trans     &trans     &tog 3
+&trans  &trans           &kp N1          &kp N2           &kp N3           &trans    &kp C_PP      &trans    &trans    &trans     &to 3      &trans
                                          &trans           &trans           &trans    &trans        &trans    &trans
             >;
         };
