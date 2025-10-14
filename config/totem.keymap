@@ -190,7 +190,7 @@
         };
 
         game_func {
-            if-layers = <4 5>;
+            if-layers = <4 2>;
             then-layer = <5>;
         };
     };
@@ -234,7 +234,7 @@
          &kp TAB    &kp Q  &kp W     &kp E  &kp R        &trans     &trans  &trans  &trans  &trans
          &kp LSHFT  &kp A  &kp S     &kp D  &kp F        &trans     &trans  &trans  &trans  &trans
 &kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &trans     &trans  &trans  &trans  &trans  &trans
-                           &kp LALT  &to 4  &kp SPACE    &kp ENTER  &to 0   &trans
+                           &kp LALT  &mo 4  &kp SPACE    &kp ENTER  &to 0   &trans
             >;
         };
 
@@ -244,7 +244,7 @@
        &kp I  &kp N7  &kp N8  &kp N9  &kp T     &trans  &trans  &trans  &trans  &trans
        &kp N  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
 &kp M  &kp J  &kp N1  &kp N2  &kp N3  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
-                      &to 5   &trans  &trans    &trans  &trans  &trans
+                      &mo 5   &trans  &trans    &trans  &trans  &trans
             >;
         };
 
