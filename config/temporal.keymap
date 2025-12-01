@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2024 Curtis Bollinger
- *
- * SPDX-License-Identifier: MIT
- */
+// Editor: https://nickcoutsos.github.io/keymap-editor/
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -166,11 +162,6 @@
 
         base_layer {
             display-name = "base";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  B  |  L  |  D   |  W   |  Z   |                                      |  -   |  F    |  O    |  U   |   J   | BSPC  |
-            // |  TAB  |  N  |  R  |  T   |  S   |  G   |                                      |  Y   |  H    |  A    |  E   |   I   |  '    |
-            //         |  Q  |  X  |  M   |  C   |  V   |                                      |  K   |  P    |  ,    |  .   |   /   |
-            //         | ENC | GUI | BSPC | SYM  | CTRL |                                      | SHFT | NAV   | TAB   | GUI  |  ENC  |
             bindings = <
                 &kp ESC   &kp B           &kp L          &kp D            &kp W            &kp Z              &kp MINUS  &kp F                 &kp O           &kp U          &kp J               &bksp_esc_morph
                 &kp TAB   &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T   &hrm_l LCTRL S   &kp G              &kp Y      &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I      &kp SQT
@@ -182,11 +173,6 @@
 
         symbol_layer {
             display-name = "symbol";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |   ~   |  @  |  #  |  &   |  *   |      |                                      |      |  ^    |  %    |  $   |  |    |       |
-            // |       |  \  |  (  |  )   |  +   |      |                                      |      |  -    |  }    |  {   |  /    |  "    |
-            //         |     |  [  |  ]   |  =   |      |                                      |      |  _    |  >    |  <   |  !    |
-            //         |     |     |      |      |      |                                      |      |       |       |      |       |
             bindings = <
                 &kp TILDE &kp AT             &kp HASH          &kp AMPS           &kp STAR           &trans             &trans  &kp CARET           &kp PRCNT          &kp DLLR          &kp PIPE              &trans
                 &trans    &hrm_l LMETA BSLH  &hrm_l LALT LPAR  &hrm_l LSHFT RPAR  &hrm_l LCTRL PLUS  &trans             &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT RBRC  &hrm_r LALT LBRC  &hrm_r LMETA FSLH     &kp DQT
@@ -198,11 +184,6 @@
 
         numnav_layer {
             display-name = "numnav";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |     |  7  |  8   |  9   |      |                                      | VOL+ | HOME  |  UP   | END  | PGUP  |       |
-            // |       |  0  |  4  |  5   |  6   |      |                                      | VOL- | LEFT  | DOWN  | RGHT | PGDN  |       |
-            //         |     |  1  |  2   |  3   |      |                                      | PLAY |       |       |      |       |
-            //         |     |     |      |      |      |                                      |      |       |       |      |       |
             bindings = <
                 &trans  &trans           &kp N7          &kp N8           &kp N9           &trans             &kp C_VOL_UP  &kp HOME  &kp UP    &kp END    &kp PG_UP          &trans
                 &trans  &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans             &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &hrm_r LMETA PG_DN &trans
@@ -214,11 +195,6 @@
 
         game_layer {
             display-name = "game";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  | TAB |  Q  |  W   |  E   |  R   |                                      |      |       |       |      |       |       |
-            // |   M   | SFT |  A  |  S   |  D   |  F   |                                      |      |       |       |      |       |       |
-            //         | CTL |  Z  |  X   |  C   |  V   |                                      |      |       |       |      |       |
-            //         |     | ALT | GM+  | SPC  |  G   |                                      | ENT  | BASE  |       |      |       |
             bindings = <
                 &kp ESC &kp TAB    &kp Q  &kp W     &kp E   &kp R             &trans     &trans  &trans  &trans  &trans  &trans
                 &kp M   &kp LSHFT  &kp A  &kp S     &kp D   &kp F             &trans     &trans  &trans  &trans  &trans  &trans
@@ -230,11 +206,6 @@
 
         game_plus_layer {
             display-name = "game+";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |  I  |  7  |  8   |  9   |  T   |                                      |      |       |       |      |       |       |
-            // |       | FN  |  4  |  5   |  6   |  G   |                                      |      |       |       |      |       |       |
-            //         |  J  |  1  |  2   |  3   |  B   |                                      |      |       |       |      |       |
-            //         |     |     |      |      |      |                                      |      |       |       |      |       |
             bindings = <
                 &trans     &kp I     &kp N7  &kp N8  &kp N9  &kp T             &trans  &trans  &trans  &trans  &trans  &trans
                 &trans     &mo FUNC  &kp N4  &kp N5  &kp N6  &kp G             &trans  &trans  &trans  &trans  &trans  &trans
@@ -246,11 +217,6 @@
 
         function_layer {
             display-name = "func";
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // | BTCLR |     |  F7 |  F8  |  F9  | F10  |                                      |      |       |       |      |       | RESET |
-            // |       |     |  F4 |  F5  |  F6  | F11  |                                      | BT0  |       |       |      |       |       |
-            //         |     |  F1 |  F2  |  F3  | F12  |                                      | BT1  |       |       |      |       |
-            //         |     |     |      |      |      |                                      |      |       |       |      |       |
             bindings = <
                 &bt_clr &trans  &kp F7  &kp F8  &kp F9  &kp F10            &trans        &trans  &trans  &trans  &trans  &sys_reset
                 &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11            &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans
