@@ -182,10 +182,10 @@
         base_layer {
             display-name = "base";
             bindings = <
-           &kp B           &kp L          &kp D           &kp W            &kp Z          &kp MINUS    &kp F                 &kp O           &kp U          &kp J
+           &kp B           &kp L          &kp D           &kp W            &kp Z          &kp DQT      &kp F                 &kp O           &kp U          &kp J
            &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I
 &kp GRAVE  &kp Q           &kp X          &kp M           &kp C            &kp V          &kp K        &kp P                 &comma_morph    &dot_morph     &qexcl          &kp SQT
-                                          &kp LCTRL       &bksp_esc_morph  &lt 1 SPACE    &lt 2 ENTER  &magic_shift LSHFT 0  &kp TAB
+                                          &kp DEL         &bksp_esc_morph  &lt 1 SPACE    &lt 2 ENTER  &magic_shift LSHFT 0  &kp TAB
             >;
         };
 
@@ -193,8 +193,8 @@
             display-name = "symbol";
             bindings = <
            &kp AT             &kp HASH          &kp AMPS           &kp STAR           &trans    &trans  &kp CARET           &kp PRCNT          &kp DLLR          &kp PIPE
-           &hrm_l LMETA BSLH  &hrm_l LALT LPAR  &hrm_l LSHFT RPAR  &hrm_l LCTRL PLUS  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT RBRC  &hrm_r LALT LBRC  &hrm_r LMETA FSLH
-&kp TILDE  &trans             &kp LBKT          &kp RBKT           &kp EQUAL          &trans    &trans  &kp UNDER           &kp GT             &kp LT            &kp EXCL           &kp DQT
+           &hrm_l LMETA BSLH  &hrm_l LALT LPAR  &hrm_l LSHFT RPAR  &hrm_l LCTRL PLUS  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT  &hrm_r LMETA FSLH
+&kp TILDE  &trans             &kp LBRC          &kp RBRC           &kp EQUAL          &trans    &trans  &kp UNDER           &kp LT             &kp GT            &kp EXCL           &kp DQT
                                                 &trans             &trans             &trans    &trans  &trans              &trans
             >;
         };
