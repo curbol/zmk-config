@@ -185,7 +185,7 @@
            &kp B           &kp L          &kp D           &kp W            &kp Z          &kp DQT      &kp F                 &kp O           &kp U          &kp J
            &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G          &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I
 &kp GRAVE  &kp Q           &kp X          &kp M           &kp C            &kp V          &kp K        &kp P                 &comma_morph    &dot_morph     &qexcl          &kp SQT
-                                          &kp DEL         &bksp_esc_morph  &lt 1 SPACE    &lt 2 ENTER  &magic_shift LSHFT 0  &kp TAB
+                                          &kp DEL         &bksp_esc_morph  &lt 2 SPACE    &lt 1 ENTER  &magic_shift LSHFT 0  &kp TAB
             >;
         };
 
@@ -214,8 +214,8 @@
             bindings = <
        &kp TAB    &kp Q  &kp W     &kp E  &kp R        &trans     &trans  &trans  &trans  &trans
        &kp LSHFT  &kp A  &kp S     &kp D  &kp F        &trans     &trans  &trans  &trans  &trans
-&kp M  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &trans     &trans  &trans  &trans  &trans  &trans
-                         &kp LALT  &mo 4  &kp SPACE    &kp ENTER  &to 0   &trans
+&kp M  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &trans     &trans  &trans  &trans  &trans  &to 0
+                         &kp LALT  &mo 4  &kp SPACE    &kp ENTER  &trans  &trans
             >;
         };
 
