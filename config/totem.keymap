@@ -192,29 +192,29 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-           &kp AT             &kp HASH          &kp AMPS           &kp STAR           &trans    &trans  &kp CARET           &kp PRCNT          &kp DLLR          &kp PIPE
-           &hrm_l LMETA BSLH  &hrm_l LALT LPAR  &hrm_l LSHFT RPAR  &hrm_l LCTRL PLUS  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT  &hrm_r LMETA FSLH
-&kp TILDE  &trans             &kp LBRC          &kp RBRC           &kp EQUAL          &trans    &trans  &kp UNDER           &kp LT             &kp GT            &kp EXCL           &kp DQT
-                                                &trans             &trans             &trans    &trans  &trans              &trans
+        &kp AT             &kp HASH          &kp AMPS           &kp STAR           &trans    &to 3   &kp CARET           &kp PRCNT          &kp DLLR          &kp PIPE
+        &hrm_l LMETA BSLH  &hrm_l LALT LPAR  &hrm_l LSHFT RPAR  &hrm_l LCTRL PLUS  &trans    &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT  &hrm_r LMETA FSLH
+&trans  &kp TILDE          &kp LBRC          &kp RBRC           &kp EQUAL          &trans    &trans  &kp UNDER           &kp LT             &kp GT            &kp EXCL           &trans
+                                             &trans             &trans             &trans    &trans  &trans              &trans
             >;
         };
 
         numnav_layer {
             display-name = "numnav";
             bindings = <
-        &kp C_VOL_UP  &kp HOME  &kp UP    &kp END    &kp PG_UP              &trans           &kp N7          &kp N8           &kp N9           &trans
-        &kp C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &hrm_l LMETA PG_DN    &hrm_r LMETA N0  &hrm_r LALT N4  &hrm_r LSHFT N5  &hrm_r LCTRL N6  &trans
-&trans  &kp C_PP      &trans    &trans    &trans     &trans                &trans           &kp N1          &kp N2           &kp N3           &trans    &to 3
-                                          &trans     &trans                &trans           &trans          &trans           &trans
+        &kp PG_UP           &kp HOME  &kp UP    &kp END    &kp C_VOL_UP    &trans  &kp N7           &kp N8           &kp N9          &kp PLUS
+        &hrm_l LMETA PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_VOL_DN    &kp N0  &hrm_r LCTRL N4  &hrm_r LSHFT N5  &hrm_r LALT N6  &hrm_r LMETA DOT
+&trans  &trans              &trans    &trans    &trans     &kp C_PP        &trans  &kp N1           &kp N2           &kp N3          &kp MINUS         &trans
+                                      &trans    &trans     &trans          &trans  &trans           &trans
             >;
         };
 
         game_layer {
             display-name = "game";
             bindings = <
-       &kp TAB    &kp Q  &kp W     &kp E  &kp R        &trans     &trans  &trans  &trans  &trans
+       &kp TAB    &kp Q  &kp W     &kp E  &kp R        &to 0      &trans  &trans  &trans  &trans
        &kp LSHFT  &kp A  &kp S     &kp D  &kp F        &trans     &trans  &trans  &trans  &trans
-&kp M  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &trans     &trans  &trans  &trans  &trans  &to 0
+&kp M  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &trans     &trans  &trans  &trans  &trans  &trans
                          &kp LALT  &mo 4  &kp SPACE    &kp ENTER  &trans  &trans
             >;
         };
