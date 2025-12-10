@@ -20,12 +20,12 @@ include:
   - board: nice_nano
     shield: temporal_right nice_view
     artifact-name: temporal_right
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: totem_left
     artifact-name: totem_left
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: totem_right
     artifact-name: totem_right
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: settings_reset
     artifact-name: totem_settings_reset
