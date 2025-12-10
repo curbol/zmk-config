@@ -152,6 +152,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // Double-tap to go to game layer
+        td_to_game: td_to_game {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_TO_GAME";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&to GAME>;
+        };
     };
 
     conditional_layers {
@@ -177,7 +186,7 @@
 &kp ESC    &kp B           &kp L          &kp D           &kp W            &kp Z             &kp DQT           &kp F                 &kp O           &kp U          &kp J           &trans
 &kp GRAVE  &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G             &kp Y             &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I  &kp SQT
            &kp Q           &kp X          &kp M           &kp C            &kp V             &kp K             &kp P                 &comma_morph    &dot_morph     &qexcl
-           &kp C_MUTE      &trans         &kp DEL         &bksp_esc_morph  &lt NUMNAV SPACE  &lt SYMBOL ENTER  &magic_shift LSHFT 0  &kp TAB         &to 3          &kp C_PP
+           &kp C_MUTE      &trans         &kp DEL         &bksp_esc_morph  &lt NUMNAV SPACE  &lt SYMBOL ENTER  &magic_shift LSHFT 0  &kp TAB         &td_to_game    &kp C_PP
             >;
 
             sensor-bindings =
