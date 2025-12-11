@@ -32,7 +32,6 @@
 
         hrm_l: hrm_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -46,7 +45,6 @@
 
         hrm_r: hrm_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_R";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -62,7 +60,6 @@
 
         comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_MORPH";
             bindings = <&kp COMMA>, <&comma_inner_morph>;
 
             #binding-cells = <0>;
@@ -71,7 +68,6 @@
 
         comma_inner_morph: comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_INNER_MORPH";
             bindings = <&kp SEMI>, <&kp LT>;
 
             #binding-cells = <0>;
@@ -82,7 +78,6 @@
 
         dot_morph: dot_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_MORPH";
             bindings = <&kp DOT>, <&dot_inner_morph>;
 
             #binding-cells = <0>;
@@ -91,7 +86,6 @@
 
         dot_inner_morph: dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_INNER_MORPH";
             bindings = <&kp COLON>, <&kp GT>;
 
             #binding-cells = <0>;
@@ -102,7 +96,6 @@
 
         qexcl: qexcl {
             compatible = "zmk,behavior-mod-morph";
-            label = "QEXCL";
             bindings = <&kp QMARK>, <&kp EXCL>;
 
             #binding-cells = <0>;
@@ -113,7 +106,6 @@
 
         bksp_esc_morph: bksp_esc_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "BKSP_ESC_MORPH";
             bindings = <&kp BSPC>, <&kp ESC>;
 
             #binding-cells = <0>;
@@ -124,7 +116,6 @@
 
         bt_clr: bt_clr {
             compatible = "zmk,behavior-mod-morph";
-            label = "BT_CLR";
             bindings = <&bt BT_CLR>, <&bt BT_CLR_ALL>;
 
             #binding-cells = <0>;
@@ -135,7 +126,6 @@
 
         magic_shift: magic_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_SHIFT";
             bindings = <&kp>, <&magic_shift_tap>;
 
             #binding-cells = <2>;
@@ -146,7 +136,6 @@
 
         magic_shift_tap: magic_shift_tap {
             compatible = "zmk,behavior-mod-morph";
-            label = "MAGIC_SHIFT_TAP";
             bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
@@ -156,7 +145,6 @@
         // Double-tap to go to game layer
         td_to_game: td_to_game {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_TO_GAME";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&to GAME>;
