@@ -143,6 +143,7 @@
         };
 
         // Double-tap to go to game layer
+
         td_to_game: td_to_game {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -197,10 +198,10 @@
         numnav_layer {
             display-name = "numnav";
             bindings = <
-&trans  &kp PLUS           &kp N7          &kp N8           &kp N9           &trans  &trans  &kp PG_UP            &kp HOME          &kp UP            &kp END             &trans
-&trans  &hrm_l LMETA DOT   &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans  &trans  &hrm_r LCTRL PG_DN   &hrm_r RSHFT LEFT &hrm_r LALT DOWN  &hrm_r LMETA RIGHT  &trans
-        &kp MINUS          &kp N1          &kp N2           &kp N3           &trans  &trans  &trans               &trans            &trans            &kp C_PP
-        &trans             &trans          &kp N0           &trans           &trans  &trans  &trans               &trans            &trans            &trans
+&trans  &trans           &kp N7          &kp N8           &kp N9           &trans  &trans  &kp PG_UP           &kp HOME           &kp UP            &kp END             &trans
+&trans  &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans  &trans  &hrm_r LCTRL PG_DN  &hrm_r RSHFT LEFT  &hrm_r LALT DOWN  &hrm_r LMETA RIGHT  &trans
+        &trans           &kp N1          &kp N2           &kp N3           &trans  &trans  &trans              &trans             &trans            &kp C_PP
+        &trans           &trans          &trans           &trans           &trans  &trans  &trans              &trans             &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
