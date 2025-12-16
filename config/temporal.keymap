@@ -172,10 +172,10 @@
         base_layer {
             display-name = "base";
             bindings = <
-&kp ESC    &kp B           &kp L          &kp D           &kp W            &kp Z             &kp DQT           &kp F                 &kp O           &kp U          &kp J           &trans
-&kp GRAVE  &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G             &kp Y             &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I  &kp SQT
-           &kp Q           &kp X          &kp M           &kp C            &kp V             &kp K             &kp P                 &comma_morph    &dot_morph     &qexcl
-           &kp C_MUTE      &trans         &kp DEL         &bksp_esc_morph  &lt NUMNAV SPACE  &lt SYMBOL ENTER  &magic_shift LSHFT 0  &kp TAB         &td_to_game    &kp C_PP
+&kp ESC    &kp B           &kp L          &kp D           &kp W            &kp Z        &kp DQT      &kp F                 &kp O           &kp U          &kp J           &trans
+&kp GRAVE  &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G        &kp Y        &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I  &trans
+           &kp Q           &kp X          &kp M           &kp C            &kp V        &kp K        &kp P                 &comma_morph    &dot_morph     &qexcl
+           &kp C_MUTE      &trans         &kp DEL         &bksp_esc_morph  &lt 1 SPACE  &lt 2 ENTER  &magic_shift LSHFT 0  &kp TAB         &td_to_game    &kp C_PP
             >;
 
             sensor-bindings =
@@ -198,10 +198,10 @@
         numnav_layer {
             display-name = "numnav";
             bindings = <
-&trans  &trans           &kp N7          &kp N8           &kp N9           &trans  &trans  &kp PG_UP           &kp HOME           &kp UP            &kp END             &trans
-&trans  &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans  &trans  &hrm_r LCTRL PG_DN  &hrm_r RSHFT LEFT  &hrm_r LALT DOWN  &hrm_r LMETA RIGHT  &trans
-        &trans           &kp N1          &kp N2           &kp N3           &trans  &trans  &trans              &trans             &trans            &kp C_PP
-        &trans           &trans          &trans           &trans           &trans  &trans  &trans              &trans             &trans            &trans
+&trans  &trans           &kp N7          &kp N8           &kp N9           &trans  &trans  &kp HOME           &kp UP             &kp END            &kp PG_UP           &trans
+&trans  &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans  &trans  &hrm_r LCTRL LEFT  &hrm_r RSHFT DOWN  &hrm_r LALT RIGHT  &hrm_r LMETA PG_DN  &trans
+        &trans           &kp N1          &kp N2           &kp N3           &trans  &trans  &trans             &trans             &trans             &trans
+        &trans           &trans          &trans           &trans           &trans  &trans  &trans             &trans             &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
