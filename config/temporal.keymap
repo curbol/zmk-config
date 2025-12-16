@@ -197,10 +197,10 @@
         numnav_layer {
             display-name = "numnav";
             bindings = <
-&trans  &kp PG_UP           &kp HOME  &kp UP    &kp END    &trans  &trans  &kp N7           &kp N8           &kp N9          &kp PLUS          &trans
-&trans  &hrm_l LMETA PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &hrm_r LCTRL N4  &hrm_r RSHFT N5  &hrm_r LALT N6  &hrm_r LMETA DOT  &trans
-        &trans              &kp C_PP  &trans    &trans     &trans  &trans  &kp N1           &kp N2           &kp N3          &kp MINUS
-        &trans              &trans    &trans    &trans     &trans  &trans  &trans           &kp N0           &trans          &trans
+&trans  &kp PLUS           &kp N7          &kp N8           &kp N9           &trans  &trans  &kp PG_UP            &kp HOME          &kp UP            &kp END             &trans
+&trans  &hrm_l LMETA DOT   &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans  &trans  &hrm_r LCTRL PG_DN   &hrm_r RSHFT LEFT &hrm_r LALT DOWN  &hrm_r LMETA RIGHT  &trans
+        &kp MINUS          &kp N1          &kp N2           &kp N3           &trans  &trans  &trans               &trans            &trans            &kp C_PP
+        &trans             &trans          &kp N0           &trans           &trans  &trans  &trans               &trans            &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
