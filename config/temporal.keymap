@@ -186,10 +186,10 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-&trans  &kp AT             &kp HASH          &kp AMPS           &kp STAR           &trans  &trans  &kp CARET           &kp PRCNT          &kp DLLR          &kp PIPE           &trans
-&trans  &hrm_l LMETA BSLH  &hrm_l LALT LPAR  &hrm_l LSHFT RPAR  &hrm_l LCTRL PLUS  &trans  &trans  &hrm_r LCTRL MINUS  &hrm_r RSHFT LBKT  &hrm_r LALT RBKT  &hrm_r LMETA FSLH  &trans
-        &kp TILDE          &kp LBRC          &kp RBRC           &kp EQUAL          &trans  &trans  &kp UNDER           &kp LT             &kp GT            &kp EXCL
-        &trans             &trans            &trans             &trans             &trans  &trans  &trans              &trans             &trans            &trans
+&trans     &kp AT             &kp HASH          &kp LBKT           &kp RBKT           &trans  &trans    &kp UNDER           &kp PRCNT          &kp DLLR          &kp SEMI           &trans
+&kp TILDE  &hrm_l LMETA LPAR  &hrm_l LALT RPAR  &hrm_l LSHFT LBRC  &hrm_l LCTRL RBRC  &trans  &kp BSLH  &hrm_r LCTRL EQUAL  &hrm_r RSHFT FSLH  &hrm_r LALT STAR  &hrm_r LMETA AMPS  &trans
+           &kp PIPE           &kp CARET         &kp LT             &kp GT             &trans  &trans    &kp MINUS           &kp PLUS           &kp EXCL          &kp COLON
+           &trans             &trans            &trans             &trans             &trans  &trans    &trans              &trans             &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
