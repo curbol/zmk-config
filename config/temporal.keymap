@@ -200,7 +200,7 @@
             bindings = <
 &trans  &trans           &kp N7          &kp N8           &kp N9           &trans  &trans  &kp HOME           &kp UP             &kp END            &kp PG_UP           &trans
 &trans  &hrm_l LMETA N0  &hrm_l LALT N4  &hrm_l LSHFT N5  &hrm_l LCTRL N6  &trans  &trans  &hrm_r LCTRL LEFT  &hrm_r RSHFT DOWN  &hrm_r LALT RIGHT  &hrm_r LMETA PG_DN  &trans
-        &trans           &kp N1          &kp N2           &kp N3           &trans  &trans  &trans             &trans             &trans             &trans
+        &trans           &kp N1          &kp N2           &kp N3           &trans  &trans  &kp MINUS          &kp PLUS           &trans             &trans
         &trans           &trans          &trans           &trans           &trans  &trans  &trans             &trans             &trans             &trans
             >;
 
