@@ -172,10 +172,10 @@
         base_layer {
             display-name = "base";
             bindings = <
-&kp ESC    &kp B           &kp L          &kp D           &kp C            &kp V        &kp J        &kp Y                 &kp O           &kp U          &comma_morph    &trans
-&kp GRAVE  &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G        &kp P        &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I  &trans
-           &kp X           &kp Q          &kp M           &kp W            &kp Z        &kp K        &kp F                 &kp SQT         &qexcl         &dot_morph
-           &kp C_MUTE      &trans         &kp DEL         &bksp_esc_morph  &lt 1 SPACE  &lt 2 ENTER  &magic_shift LSHFT 0  &kp TAB         &td_to_game    &kp C_PP
+&kp ESC  &kp B           &kp L          &kp D           &kp C            &kp V             &kp J             &kp Y                 &kp O           &kp U          &comma_morph    &trans
+&kp TAB  &hrm_l LMETA N  &hrm_l LALT R  &hrm_l LSHFT T  &hrm_l LCTRL S   &kp G             &kp P             &hrm_r LCTRL H        &hrm_r RSHFT A  &hrm_r LALT E  &hrm_r LMETA I  &kp GRAVE
+         &kp X           &kp Q          &kp M           &kp W            &kp Z             &kp K             &kp F                 &kp SQT         &qexcl         &dot_morph
+         &kp C_MUTE      &trans         &kp DEL         &bksp_esc_morph  &lt SYMBOL SPACE  &lt NUMNAV ENTER  &magic_shift LSHFT 0  &kp TAB         &td_to_game    &kp C_PP
             >;
 
             sensor-bindings =
@@ -186,10 +186,10 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-&trans     &kp AT             &kp HASH          &kp LBKT           &kp RBKT           &trans  &trans    &kp UNDER           &kp PRCNT          &kp DLLR          &kp SEMI           &trans
-&kp TILDE  &hrm_l LMETA LPAR  &hrm_l LALT RPAR  &hrm_l LSHFT LBRC  &hrm_l LCTRL RBRC  &trans  &kp BSLH  &hrm_r LCTRL EQUAL  &hrm_r RSHFT FSLH  &hrm_r LALT STAR  &hrm_r LMETA AMPS  &trans
-           &kp PIPE           &kp CARET         &kp LT             &kp GT             &trans  &trans    &kp MINUS           &kp PLUS           &kp EXCL          &kp COLON
-           &trans             &trans            &trans             &trans             &trans  &trans    &trans              &trans             &trans            &trans
+&trans  &kp AT             &kp HASH          &kp LBKT           &kp RBKT           &trans  &trans    &kp UNDER           &kp PRCNT          &kp DLLR          &kp SEMI           &trans
+&trans  &hrm_l LMETA LPAR  &hrm_l LALT RPAR  &hrm_l LSHFT LBRC  &hrm_l LCTRL RBRC  &trans  &kp BSLH  &hrm_r LCTRL EQUAL  &hrm_r RSHFT FSLH  &hrm_r LALT STAR  &hrm_r LMETA AMPS  &kp TILDE
+        &kp PIPE           &kp CARET         &kp LT             &kp GT             &trans  &trans    &kp MINUS           &kp PLUS           &kp EXCL          &kp COLON
+        &trans             &trans            &trans             &trans             &trans  &trans    &trans              &trans             &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -210,10 +210,10 @@
         game_layer {
             display-name = "game";
             bindings = <
-&trans  &kp TAB    &kp Q   &kp W     &kp E       &kp R      &to BASE   &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp A   &kp S     &kp D       &kp F      &trans     &trans  &trans  &trans  &trans  &trans
-        &kp LCTRL  &kp X   &kp M     &kp C       &kp V      &trans     &trans  &trans  &trans  &trans
-        &trans     &trans  &kp LALT  &mo GAME_P  &kp SPACE  &kp ENTER  &trans  &trans  &to 0   &trans
+&kp ESC &kp G      &kp Q    &kp W     &kp E       &kp R      &trans     &trans  &trans  &trans   &trans  &trans
+&kp TAB &kp LSHFT  &kp A    &kp S     &kp D       &kp F      &trans     &trans  &trans  &trans   &trans  &trans
+        &kp LCTRL  &kp Z    &kp X     &kp C       &kp V      &trans     &trans  &trans  &trans   &trans
+        &trans     &mo FUNC &kp LALT  &mo GAME_P  &kp SPACE  &kp ENTER  &trans  &trans  &to BASE &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -222,10 +222,10 @@
         game_plus_layer {
             display-name = "game+";
             bindings = <
-&trans  &kp I     &kp N4  &kp N5        &kp N6  &kp T   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mo FUNC  &kp N1  &kp NUMBER_2  &kp N3  &kp G   &trans  &trans  &trans  &trans  &trans  &trans
-        &kp J     &kp N   &kp O         &kp P   &kp B   &trans  &trans  &trans  &trans  &trans
-        &trans    &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp J   &kp M   &kp N7  &kp N8  &kp N9  &kp T   &trans  &trans  &trans  &trans  &trans  &trans
+&kp L   &kp N   &kp N4  &kp N5  &kp N6  &kp H   &trans  &trans  &trans  &trans  &trans  &trans
+        &kp I   &kp N1  &kp N2  &kp N3  &kp B   &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
