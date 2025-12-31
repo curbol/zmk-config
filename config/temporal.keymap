@@ -222,10 +222,10 @@
         game_plus_layer {
             display-name = "game+";
             bindings = <
-&trans  &kp ESC  &kp TAB  &trans  &kp M   &kp T   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mo 5    &kp N4   &kp N5  &kp N6  &kp H   &trans  &trans  &trans  &trans  &trans  &trans
-        &kp I    &kp N1   &kp N2  &kp N3  &kp B   &trans  &trans  &trans  &trans  &trans
-        &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ESC  &kp N7  &kp N8  &kp N9  &kp T   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mo 5    &kp N4  &kp N5  &kp N6  &kp M   &trans  &trans  &trans  &trans  &trans  &trans
+        &kp TAB  &kp N1  &kp N2  &kp N3  &kp B   &trans  &trans  &trans  &trans  &trans
+        &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
