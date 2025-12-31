@@ -17,6 +17,6 @@ manifest:
       revision: main
     - name: temporal-zmk
       remote: curbol
-      revision: main
+      revision: b256afb  # pinned to 10-thumb-key version for current keyboard
   self:
     path: config
